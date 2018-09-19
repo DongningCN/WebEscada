@@ -1,0 +1,279 @@
+
+.login-window{
+    .x-window-body {
+        background-image:url('images/lock-screen-background.jpg');
+        background-size:cover;
+        background-repeat:repeat;
+    }
+
+    &.x-window-default {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+.auth-dialog {
+
+    .auth-profile-wrap {
+        background: $base-color;
+        color: $lightest-color;
+        line-height: 24px;
+
+        .user-name-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .user-post-text {
+            font-size: 14px;
+        }
+
+        .auth-profile-img {
+            @include border-radius($circle-border-radius);
+        }
+    }
+
+    .x-form-text-default, .x-placeholder-label-default {
+        padding: 15px;
+    }
+
+    .trigger-glyph-noop {
+        cursor: default;
+    }
+
+    .x-form-trigger {
+        text-align: right;
+        width: 50px;
+    }
+
+    .password-trigger,
+    .auth-email-trigger,
+    .auth-password-trigger {
+        &:before {
+            top: 10px;
+            left: -18px;
+            position: relative;
+            color: $dialog-trigger-color;
+            font-size: 30px;
+        }
+
+        &.password-trigger:before,
+        &.auth-password-trigger:before {
+            content: "\f023";
+        }
+
+        &.auth-email-trigger:before {
+            content: "\f007";
+        }
+    }
+
+    .link-forgot-password {
+        line-height: 32px;
+        color: $base-color;
+        text-decoration: none;
+        margin-left: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .x-btn {
+        .x-btn-icon-el {
+            &:before {
+                right: 10px;
+                font-size: 24px;
+                position: absolute;
+            }
+        }
+    }
+
+}
+
+.wiring-diagram16{
+	background-image: url("/WebEscada/resources/images/wiringdiagram/diagram-icon-16x16.png");
+}
+.esacada-headerbar {
+	background-color: #224466;
+    padding: 0 0 0 2;
+	margin  : '1 0 0 20';
+    width: 100%;
+    z-index: 10;
+    border: none;
+	.x-toolbar-item{
+		font-size: 20px !important;
+	}
+}
+.esacada-content {
+	border: none;
+}
+.esacada-bottombar {
+    width: 100%;
+    z-index: 10;
+    border: none;
+}
+.top-user-name{
+	color: #0f0;
+}
+.top-logout{
+	color: #0f0;//绿色
+}
+.main-left-navigation{
+	background: #55f;
+}
+#svgtoolbar{
+	.svg-toolbar-head{
+	 	position: absolute; left: 0px; top: 0px; z-index: 10;margin-bottom: 0px; width: 50px; height: 50px;
+	};
+	.svg-toolbar-background{
+	 	position: absolute; left: 0px; top: 0px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	};
+	.svg-toolbar-offset{
+	 	position: absolute; overflow: hidden; opacity: 0.01; cursor: pointer; width: 50px; height: 50px; cursor: pointer;
+	 	img{
+	 		width: 50px; height: 50px; color:#f00;
+	 	};
+	};
+	.svg-toolbar-restore{
+	 	position: absolute; margin: 0px; z-index: 10;left: 15px; top: 50px;cursor: pointer; overflow: hidden; width: 20px; height: 20px;
+	 	img{
+	 		position: absolute; left: -61px; top: 0px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	 	};
+	};
+	.svg-toolbar-magnify{
+	 	position: absolute; margin: 0px; z-index: 10;left: 15px; top: 70px;cursor: pointer; overflow: hidden; width: 20px; height: 20px;
+	 	img{
+	 		position: absolute; left: -61px; top: -23px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	 	};
+	};
+	.svg-toolbar-reduce{
+	 	position: absolute; margin: 0px; z-index: 10;left: 15px; top:90px; cursor: pointer; overflow: hidden; width: 20px; height: 20px;
+	 	img{
+	 		position: absolute; left: -90px; top: -23px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	 	};
+	};
+	.svg-toolbar-print{
+	 	position: absolute; margin: 0px; z-index: 10;left: 15px; top:110px; cursor: pointer; overflow: hidden; width: 20px; height: 20px;
+	 	img{
+	 		position: absolute; left: -87px; top: 0px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	 	};
+	};
+	.svg-toolbar-main{
+	 	position: absolute; margin: 0px; z-index: 10;left: 15px; top:130px; cursor: pointer; overflow: hidden; width: 20px; height: 20px;
+	 	img{
+	 		position: absolute; left: -108px; top: 0px; -moz-user-select: none; border: medium none; width: 128px; height: 261px;
+	 	};
+	};
+}
+
+$exec-dark-background: dynamic(#3e4752);
+/*
+@include extjs-tab-panel-ui(
+    $ui: 'navigation',
+    $ui-tab-background-color: transparent,
+    $ui-tab-background-color-over: transparent,
+    $ui-tab-background-color-active: transparent,
+    $ui-tab-color: #fff,
+    $ui-tab-color-over: #fff,
+    $ui-tab-color-active: #fff,
+    $ui-tab-glyph-color: #fff,
+    $ui-tab-glyph-color-over: #fff,
+    $ui-tab-glyph-color-active: #fff,
+    $ui-tab-glyph-opacity: 1,
+    $ui-tab-border-radius: 0,
+    $ui-tab-border-width: 0,
+    $ui-tab-padding: 5px 10px,
+    $ui-tab-margin: 0,
+    $ui-tab-font-size: 14px,
+    $ui-tab-font-size-over: 14px,
+    $ui-tab-font-size-active: 14px,
+    $ui-tab-font-weight: 600,
+    $ui-tab-font-weight-over: 600,
+    $ui-tab-font-weight-active: 600,
+    $ui-bar-background-color: $exec-dark-background,
+    $ui-bar-background-gradient: 'none',
+    $ui-bar-padding: 0,
+    $ui-strip-height: 0
+);
+*/
+/**
+ * Generates a set of style rules for the "navigation" panel UI.
+ */
+ //顶层菜单样式控制
+@include extjs-panel-ui(
+    $ui: 'navigation',
+    $ui-header-color: #fff,
+    $ui-header-glyph-color: #fff,
+    $ui-header-glyph-opacity: 1,
+    $ui-header-font-size: 20px,
+    $ui-header-line-height: 24px,
+    $ui-header-font-weight: 600,
+    $ui-header-icon-height: 32px,
+    $ui-header-icon-width: 32px,
+    $ui-header-icon-spacing: 16px,
+    $ui-header-background-color: $exec-dark-background,
+    $ui-header-padding: 0,
+    $ui-header-text-margin: 5px 5px,
+    $ui-header-noborder-adjust: false,
+    $ui-border-width : 4px,
+    $ui-body-border-width : 1px !important
+);
+//左边导航栏风格
+.x-panel-header-title-navigation {
+    text-align: center;
+    color: yellow;
+    font-size: 16px;
+}
+
+//UI Styles for buttons
+@include extjs-button-small-ui( $ui: 'soft-blue', $background-color: $color-soft-blue, $border-color: darken($color-soft-blue, 5%) );
+@include extjs-button-medium-ui( $ui: 'soft-blue', $line-height: 24px, $background-color: $color-soft-blue, $border-color: darken($color-soft-blue, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'soft-blue', $background-color: $color-soft-blue, $border-color: darken($color-soft-blue, 5%) );
+
+@include extjs-button-small-ui( $ui: 'soft-cyan', $background-color: $color-soft-cyan, $border-color: darken($color-soft-cyan, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'soft-cyan', $background-color: $color-soft-cyan, $border-color: darken($color-soft-cyan, 5%) );
+
+@include extjs-button-small-ui( $ui: 'soft-purple', $background-color: $color-soft-purple, $border-color:darken($color-soft-purple, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'soft-purple', $background-color: $color-soft-purple, $border-color:darken($color-soft-purple, 5%) );
+@include extjs-button-medium-ui( 
+	$ui: 'soft-purple', 
+	$font-size: 20px,
+	$font-weight: 700,
+	$line-height: 24px, 
+	$background-color: $color-soft-purple, 
+	$border-color:darken($color-soft-purple, 5%) 
+);
+
+@include extjs-button-small-ui( $ui: 'gray', $background-color: $color-gray, $border-color:darken($color-gray, 5%) );
+@include extjs-button-medium-ui( $ui: 'gray', $line-height: 24px, $background-color: $color-gray, $border-color:darken($color-gray, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'gray', $background-color: $color-gray, $border-color:darken($color-gray, 5%) );
+
+@include extjs-button-small-ui( $ui: 'green', $background-color: $color-green, $border-color:darken($color-green, 5%) );
+@include extjs-button-toolbar-small-ui(
+ 	$ui: 'green', 
+ 	$background-color: $color-green, 
+ 	$border-color:darken($color-green, 5%) 
+ );
+@include extjs-button-medium-ui( 
+	$ui: 'green',
+	$font-size: 20px,
+	$font-weight: 700,
+	$color: #fff,//字体颜色
+	$line-height: 24px, 
+	$background-color: $color-green, 
+	$border-color:darken($color-green, 5%) 
+);
+
+@include extjs-button-small-ui( $ui: 'soft-green', $background-color: $color-soft-green, $border-color:darken($color-soft-green, 5%) );
+@include extjs-button-large-ui( $ui: 'soft-green', $line-height: 34px, $background-color: $color-soft-green, $border-color:darken($color-soft-green, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'soft-green', $background-color: $color-soft-green, $border-color:darken($color-soft-green, 5%) );
+
+
+@include extjs-button-small-ui( $ui: 'blue', $background-color: $color-blue, $border-color:darken($color-blue, 5%) );
+@include extjs-button-toolbar-small-ui( $ui: 'blue', $background-color: $color-blue, $border-color:darken($color-blue, 5%) );
+
+@include extjs-button-small-ui( $ui: 'header', $color: #999, $glyph-color: #919191, $background-color: transparent, $border-width: 0 );
+
+.x-form-readonly input, .x-form-readonly textarea, .x-form-readonly .x-form-cb-default::before {
+    background: rgba(226, 226, 226, 0.56);
+}

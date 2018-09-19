@@ -1,0 +1,1138 @@
+<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1295.0995 866.96382" id="ext-gen1397" style="fill:#d3d3d3;stroke:#000000;stroke-width:1px">
+	<defs>
+		<symbol id="xbreaker">
+			<title>X方向断路器</title>
+			<path style="fill:none;" d="m 0,36 c 18,0 18,0 18,0"></path>
+			<path style="fill:none;" d="m 54,36 c 18,0 18,0 18,0"></path>
+			<rect width="36" height="18" x="18" y="27"></rect>
+		</symbol>
+		<symbol id="ybreaker">
+			<title>Y方向断路器</title>
+			<path style="fill:none;" d="m 36,0 c 0,18 0,18 0,18"></path>
+			<path style="fill:none;" d="m 36,54 c 0,18 0,18 0,18"></path>
+			<rect width="18" height="36" x="27" y="18"></rect>
+		</symbol>
+		<symbol id="ac-motor">
+			<title>交流电动机</title>
+			<circle style="fill:none" cx="24" cy="24" r="22"></circle>
+			<circle r="19" cy="24" cx="24" style="fill:none"></circle>
+			<path style="fill:none;stroke-width:0.5" d="m 15,36 c 0,0 2,-4 5,-4 3,0 4,4 7,4 3,0 5.5,-4 5.5,-4"></path>
+			<path style="fill:none;stroke-width:0.8" d="m 18,24 0,-10 6,6 6,-6 0,10"></path>
+		</symbol>
+		<symbol id="Ground">
+			<title>接地</title>
+			<path d="m 12,0 0,12" style="fill:none;"></path>
+			<path d="m 0,12 24,0" style="fill:none"></path>
+			<path d="m 4,15 16,0" style="fill:none"></path>
+			<path d="m 8,18 8,0" style="fill:none"></path>
+		</symbol>
+		<symbol id="cable-terminal">
+			<title>电缆终端头</title>
+			<path style="fill:none" d="m 6,8 12,0 -6,8 z"></path>
+			<path style="fill:none" d="m 12,0 0,24"></path>
+		</symbol>
+		<symbol id="spark-gap">
+			<title>火花间隙</title>
+			<path d="m 9,4 3,6 3,-6 z"></path>
+			<path d="m 12,14 -3,6 6,0 z"></path>
+			<path d="m 12,1 0,3"></path>
+			<path d="m 12,23 0,-3"></path>
+		</symbol>
+		<symbol id="reactor">
+			<title>电抗器</title>
+			<path style="fill:none" d="M 36,47.5 36,60 m 0,-48 0,24 -12.50,0 M 36,48 A 12,12 0 1 0 24,36"></path>
+		</symbol>
+		<symbol id="arc-suppression-coil">
+			<title>消弧线圈</title>
+			<rect style="fill:none" width="18" height="36" x="23" y="14"></rect>
+			<path style="fill:none;stroke-width:0.5px" d="m 18,46 0,-6 28,-16 0,-6"></path>
+			<path style="fill:none" d="m 32,8 0,6"></path>
+			<path style="fill:none" d="m 32,56 0,-6"></path>
+		</symbol>
+		<symbol id="capacitor-bank">
+			<title>电容器组</title>
+			<path style="fill:none" d="m 36,18 0,18"></path>
+			<path style="fill:none" d="m 18,27 0,9 36,0 0,-9"></path>
+		</symbol>
+		<symbol id="trolley">
+			<title>手车</title>
+			<path style="fill:none;" d="m 18,0 0,13"></path>
+			<path style="fill:none;" d="M 18,108 18,95"></path>
+			<path style="fill:none" d="m 8,23 10,-5 10,5"></path>
+			<path style="fill:none" d="m 8,18 10,-5 10,5"></path>
+			<path style="fill:none" d="m 8,85 10,5 10,-5"></path>
+			<path style="fill:none" d="m 8,90 10,5 10,-5"></path>
+		</symbol>
+		<symbol id="zero-sequence-current">
+			<title>零序电流</title>
+			<circle cx="36" cy="36" r="12" style="fill:none"></circle>
+			<path style="fill:none" d="m 30,16 0,40"></path>
+			<path style="fill:none" d="m 36,16 0,40"></path>
+			<path style="fill:none" d="m 42,16 0,40"></path>
+		</symbol>
+		<symbol id="ct">
+			<title>电流互感器</title>
+			<circle r="6" cy="9" cx="12" style="fill:none"></circle>
+			<path style="fill:none" d="m 12,0 0,18"></path>
+			<path style="fill:none;stroke-width:0.5px" d="M 18,9 30,9"></path>
+			<path style="fill:none;stroke-width:0.5px" d="M 19,12 25,6"></path>
+			<path style="fill:none;stroke-width:0.5px" d="m 30,6 -6,6"></path>
+		</symbol>
+		<symbol id="pt">
+			<title>电压互感器</title>
+			<circle cx="36" cy="31" r="12" style="fill:none"></circle>
+			<circle cx="28" cy="41" r="12" style="fill:none"></circle>
+			<circle cx="44" cy="41" r="12" style="fill:none"></circle>
+		</symbol>
+		<symbol id="pt-4">
+			<title>电压互感器-4</title>
+			<circle style="fill:none" cx="22" cy="36" r="12"></circle>
+			<circle style="fill:none" cx="50" cy="36" r="12"></circle>
+			<circle r="12" cy="28" cx="36" style="fill:none"></circle>
+			<circle style="fill:none" cx="36" cy="44" r="12"></circle>
+		</symbol>
+		<symbol id="fuse">
+			<title>熔断器</title>
+			<rect style="fill:none" width="18" height="36" x="27" y="18"></rect>
+			<path style="fill:none" d="M 36,0 36,72"></path>
+		</symbol>
+		<symbol id="xlamp">
+			<title>X方向信号灯</title>
+			<circle cx="36" cy="36" r="12"></circle>
+			<path style="fill:none;" d="m 12,36 12,0"></path>
+			<path d="m 48,36 12,0" style="fill:none;"></path>
+			<path style="fill:none;" d="m 27.5,27.5 17,17"></path>
+			<path d="m 44.5,27.5 -17,17" style="fill:none;"></path>
+		</symbol>
+		<symbol id="ylamp">
+			<title>Y方向信号灯</title>
+			<circle cx="36" cy="36" r="12"></circle>
+			<path style="fill:none;" d="m 36,12 0,12"></path>
+			<path d="m 36,48 0,12" style="fill:none;"></path>
+			<path style="fill:none;" d="m 27.5,27.5 17,17"></path>
+			<path d="m 44.5,27.5 -17,17" style="fill:none;"></path>
+		</symbol>
+		<symbol id="lightning">
+			<title>避雷器</title>
+			<rect style="fill:none" width="18" height="36" x="27" y="18"></rect>
+			<path style="fill:none" d="m 30,24 12,0 -6,16 z"></path>
+			<path style="fill:none" d="M 36,0 36,24"></path>
+			<path style="fill:none" d="m 36,54 0,18"></path>
+		</symbol>
+		<symbol id="xcapacitor">
+			<title>X方向电容器</title>
+			<path style="fill:none" d="m 32,27 0,18"></path>
+			<path style="fill:none" d="m 40,27 0,18"></path>
+			<path style="fill:none" d="m 40,36 12,0"></path>
+			<path d="m 20,36 12,0" style="fill:none"></path>
+		</symbol>
+		<symbol id="ycapacitor">
+			<title>Y方向电容器</title>
+			<path style="fill:none" d="m 27,32 18,0"></path>
+			<path style="fill:none" d="m 27,40 18,0"></path>
+			<path style="fill:none" d="m 36,40 0,12"></path>
+			<path d="m 36,20 0,12" style="fill:none"></path>
+		</symbol>
+		<symbol id="y-contactor-off">
+			<title>Y方向接触器分</title>
+			<path style="fill:none" d="m 36,0 0,32 c 0,0 8,-2 8,-5 0,-3 -8,-4 -8,-4"></path>
+			<path style="fill:none" d="M 36,72 36,48 56,27"></path>
+		</symbol>
+		<symbol id="y-contactor-on">
+			<title>Y方向接触器合</title>
+			<path style="fill:none" d="m 36,0 0,32 c 0,0 8,-2 8,-5 0,-3 -8,-4 -8,-4"></path>
+			<path style="fill:none" d="M 36,72 36,48 44,27"></path>
+		</symbol>
+		<symbol id="y-disconnector-off">
+			<title>Y方向隔离刀闸分</title>
+			<path style="fill:none;" d="m 36,0 0,24"></path>
+			<path style="fill:none" d="M 36,72 36,48 52,24"></path>
+			<path style="fill:none" d="m 28,24 16,0"></path>
+		</symbol>
+		<symbol id="y-disconnector-on">
+			<title>Y方向隔离刀闸合</title>
+			<path style="fill:none;stroke-linecap:round;" d="m 36,0 0,24"></path>
+			<path style="fill:none;stroke-linecap:round" d="m 28,24 16,0"></path>
+			<path style="fill:none;stroke-linecap:round" d="M 36,72 36,48 44,24"></path>
+		</symbol>
+		<symbol id="x-disconnector-on">
+			<title>X方向隔离刀闸合</title>
+			<path style="fill:none;stroke-linecap:round;" d="m 0,36 24,0"></path>
+			<path style="fill:none;stroke-linecap:round" d="M 72,36 48,36 24,28"></path>
+			<path style="fill:none;stroke-linecap:round" d="M 24,44 24,28"></path>
+		</symbol>
+		<symbol id="x-disconnector-off">
+			<title>X方向隔离刀闸分</title>
+			<path style="fill:none;" d="m 0,36 24,0"></path>
+			<path style="fill:none" d="M 72,36 48,36 24,20"></path>
+			<path style="fill:none" d="M 24,44 24,28"></path>
+		</symbol>
+		<symbol id="xswitch-off">
+			<title>X方向开关分</title>
+			<path style="fill:none;" d="m 0,36 24,0"></path>
+			<path style="fill:none" d="M 16.243239,43.808613 31.99127,28.060582 m -15.748031,3e-6 15.748031,15.748028"></path>
+			<path style="fill:none" d="m 24,16 24,20 24,0"></path>
+		</symbol>
+		<symbol id="xswitch-on">
+			<title>X方向开关合</title>
+			<path style="fill:none;" d="m 0,36 24,0"></path>
+			<path style="fill:none" d="M 16.243239,43.808567 31.99127,28.060536 m -15.748031,3e-6 15.748031,15.748028"></path>
+			<path style="fill:none" d="m 24,36 48,0"></path>
+		</symbol>
+		<symbol id="yswitch-on">
+			<title>Y方向开关合</title>
+			<path style="fill:none" d="m 36.027422,21.661853 c -0.02435,16.7779 -0.04414,33.55581 -0.03583,50.33373"></path>
+			<path style="fill:none" d="m 35.991591,-0.00441843 0,21.60000143 m -7.200001,7.2 14.400002,-14.4 m -14.400002,0 14.400002,14.4"></path>
+		</symbol>
+		<symbol id="yswitch-off">
+			<title>Y方向开关分</title>
+			<path style="fill:none" d="m 57.357469,21.662208 -21.33449,28.259314 0,22.074413"></path>
+			<path style="fill:none" d="m 36.022979,-0.00406261 0,21.59999961 m -7.2,7.2 14.4,-14.4 m -14.4,0 14.4,14.4"></path>
+		</symbol>
+		<symbol id="transformer2">
+			<title>二绕组变压器</title>
+			<g>
+				<circle r="12" cy="27" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="fill:none;stroke-width:0.5" d="m 32,30.3 4,-3 0,-4"></path>
+					<path style="fill:none;stroke-width:0.5" d="m 40,30.3 -4,-3"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="45" cx="36" style="fill:none"></circle>
+				<path d="m 32,42 8,0 -4,5 z" style="stroke-width:0.5"></path>
+			</g>
+		</symbol>
+		<symbol id="onloadtransformer2">
+			<title>二绕组有载调压变压器</title>
+			<g>
+				<circle r="12" cy="27" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="fill:none;stroke-width:0.5" d="m 33,31 3,-4 0,-4"></path>
+					<path style="fill:none;stroke-width:0.5" d="M 40,31 36,27"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="45" cx="36" style="fill:none"></circle>
+				<path d="m 32,47 8,0 -4,-5 z" style="stroke-width:0.5"></path>
+			</g>
+			<path style="fill:none;stroke-width:0.5" d="M 20,34 52,20"></path>
+			<path style="stroke-width:0.5" d="m 49,20 1,2 2,-2 z"></path>
+		</symbol>
+		<symbol id="transformer3">
+			<title>三绕组变压器</title>
+			<g>
+				<circle r="12" cy="27.5" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="fill:none;stroke-width:0.5" d="m 32,30.8 4,-3 0,-4"></path>
+					<path style="fill:none;stroke-width:0.5" d="m 40,30.8 -4,-3"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="26" style="fill:none"></circle>
+				<g>
+					<path d="m 30,40.8 -4,3 0,4" style="fill:none;stroke-width:0.5"></path>
+					<path d="m 22,40.8 4,3" style="fill:none;stroke-width:0.5"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="46" style="fill:none"></circle>
+				<path d="m 43,40.5 0,8 5,-4 z" style="stroke-width:0.5"></path>
+			</g>
+		</symbol>
+		<symbol id="onloadtransformer3">
+			<title>三绕组有载调压变压器</title>
+			<g>
+				<circle r="12" cy="27.5" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="fill:none;stroke-width:0.5" d="m 32,30.8 4,-3 0,-4"></path>
+					<path style="fill:none;stroke-width:0.5" d="m 40,30.8 -4,-3"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="26" style="fill:none"></circle>
+				<g>
+					<path d="m 22,47.8 4,-3 0,-4" style="fill:none;stroke-width:0.5"></path>
+					<path d="m 30,47.8 -4,-3" style="fill:none;stroke-width:0.5"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="46" style="fill:none"></circle>
+				<path d="m 43,40.5 0,8 5,-4 z" style="stroke-width:0.5"></path>
+			</g>
+			<g>
+				<path d="M 13,34 54,21" style="fill:none;stroke-width:0.5"></path>
+				<path d="M 49,20 50.542708,24.395821 54,21 Z" style="stroke-width:0.5"></path>
+			</g>
+		</symbol>
+		<symbol id="transformer2-1">
+			<title>二绕组有载调压变压器</title>
+			<g>
+				<circle r="12" cy="27" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="stroke-width:0.5" d="m 33,31 3,-4 0,-4"></path>
+					<path style="stroke-width:0.5" d="M 40,31 36,27"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="45" cx="36" style="fill:none"></circle>
+				<path d="m 32,47 8,0 -4,-5 z" style="stroke-width:0.5"></path>
+			</g>
+			<path style="stroke-width:0.5" d="M 20,34 52,20"></path>
+			<path style="stroke-width:0.5" d="m 49,20 1,2 2,-2 z"></path>
+		</symbol>
+		<symbol id="transformer3-1">
+			<title>三绕组有载调压变压器</title>
+			<g>
+				<circle r="12" cy="27.5" cx="36" style="fill:none"></circle>
+				<g>
+					<path style="stroke-width:0.5" d="m 32,30.8 4,-3 0,-4"></path>
+					<path style="stroke-width:0.5" d="m 40,30.8 -4,-3"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="26" style="fill:none"></circle>
+				<g>
+					<path d="m 22,47.8 4,-3 0,-4" style="stroke-width:0.5"></path>
+					<path d="m 30,47.8 -4,-3" style="stroke-width:0.5"></path>
+				</g>
+			</g>
+			<g>
+				<circle r="12" cy="44.5" cx="46" style="fill:none"></circle>
+				<path d="m 43,40.5 0,8 5,-4 z" style="stroke-width:0.5"></path>
+			</g>
+			<g>
+				<path d="M 13,34 54,21" style="stroke-width:0.5"></path>
+				<path d="M 49,20 50.542708,24.395821 54,21 Z" style="stroke-width:0.5"></path>
+			</g>
+		</symbol>
+	</defs>
+	<text font-size="32px" stroke="#0000ff" y="166.50917" x="540.63879" font-family="Sans" line-height="125%" fill="#0000ff">
+		<tspan y="166.50917" x="540.63879">10kV接线图</tspan>
+	</text>
+	<text font-size="12.5px" font-family="Sans" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="419.16318" x="10.207246" font-weight="bold" fill="#0000f8">
+		<tspan>10kVI段母线</tspan>
+	</text>
+	<g class="cabinet" title="1#PT柜">
+		<title>1#PT柜</title>
+		<g font-size="12.5px" stroke-width="1px" transform="translate(655.09 -395.16)">
+			<text style="word-spacing:0px;letter-spacing:0px" y="535.2074" x="-245.25473" font-family="Sans" line-height="125%">
+				<tspan>Ua:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" y="535.28979" title="RTU005_YC00071(1#PT柜保护_Uab1)" limitstatus="0" value="0" line-height="125%" pointmap="yc:station:1,no:71,channel:1,rtu:5,address:2052" iv="1" x="-220.46454" stroke-width="1px" class="analogtext">0.0
+				<title>RTU005_YC00071(1#PT柜保护_Uab1)</title>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" y="551.2074" x="-245.25473" font-family="Sans" line-height="125%">
+				<tspan y="551.2074" x="-245.25473">Ub:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU005_YC00072(1#PT柜保护_Ubc1)" class="analogtext" limitstatus="0" value="0" iv="1" y="551.28979" pointmap="yc:station:1,no:72,channel:1,rtu:5,address:2053" x="-220.46454" stroke-width="1px">0.0
+				<title>RTU005_YC00072(1#PT柜保护_Ubc1)</title>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" y="567.2074" x="-245.25473" font-family="Sans" line-height="125%">
+				<tspan>Uc:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" y="567.28979" title="RTU005_YC00073(1#PT柜保护_Uca1)" limitstatus="0" value="0" line-height="125%" pointmap="yc:station:1,no:73,channel:1,rtu:5,address:2054" iv="1" x="-220.46454" stroke-width="1px" class="analogtext">0.0
+				<title>RTU005_YC00073(1#PT柜保护_Uca1)</title>
+			</text>
+		</g>
+		<g stroke-width="1" transform="matrix(-1 0 0 -1 1065.8 506.16)">
+			<use transform="translate(559.97,226.85)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			<use transform="translate(535.97,154.85)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+		</g>
+		<use transform="matrix(-1 0 0 -1 474.04 363.66)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#fuse"></use>
+		<use class="trolley" transform="matrix(-1 0 0 -1 456.04 382.06)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley"></use>
+		<g transform="translate(-37.357,1.8032)">
+			<use transform="matrix(-1 0 0 -1 543.16 194.63)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#Ground"></use>
+			<path d="m531.16 349.51h-54.852" stroke-width="1px" fill="none"></path>
+			<path d="m475.39 272.26v-36.761" stroke-width="1px" fill="none"></path>
+		</g>
+		<use transform="matrix(-1 0 0 -1 473.9 254.22)" height="100%" width="100%" y="0" x="0" xlink:href="#pt-4"></use>
+		<path d="m493.8 190.43v28.999h-28.596" stroke-width="1px" fill="none"></path>
+	</g>
+	<g class="cabinet" title="厂用变">
+		<title>厂用变</title>
+		<g transform="translate(-101.77,1.8032)">
+			<g stroke-width="1" transform="translate(32.481,352.29)">
+				<use transform="translate(559.97,226.85)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+				<use transform="translate(535.97,154.85)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+			</g>
+			<use transform="translate(624.22,494.4)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#fuse"></use>
+			<use transform="translate(642.22,476.4)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley"></use>
+		</g>
+		<path d="m502.68 508.95h54.852" stroke-width="1px" fill="none"></path>
+		<path d="m558.45 636.2v36.761" stroke-width="1px" fill="none"></path>
+		<use transform="translate(522.14 657.89)" height="100%" width="100%" y="0" x="0" xlink:href="#transformer2"></use>
+		<path d="m558.45 586.2v50" stroke-width="1px" fill="none"></path>
+	</g>
+	<g class="cabinet" title="2#PT柜">
+		<title>2#PT柜</title>
+		<use transform="rotate(180 572.5 182.72)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#fuse"></use>
+		<use transform="rotate(180 563.5 191.92)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley"></use>
+		<g transform="translate(633.6,3.5887)">
+			<use transform="rotate(180,271.58,97.315)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#Ground"></use>
+			<path d="m531.16 349.51h-54.85" stroke-width="1px" fill="none"></path>
+			<path d="m475.39 272.26v-36.76" stroke-width="1px" fill="none"></path>
+		</g>
+		<use transform="rotate(180 572.45 128)" height="100%" width="100%" y="0" x="0" stroke-width="1px" xlink:href="#pt-4"></use>
+		<g>
+			<g font-size="12.5px" stroke-width="1px" transform="translate(1326 -393.37)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="535.2074" x="-245.25473" font-family="Sans" line-height="125%">
+					<tspan>Ua:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" title="RTU014_YC00234(2#PT柜保护_Uab1)" class="analogtext" limitstatus="0" value="0" y="535.28979" iv="1" pointmap="yc:station:1,no:234,channel:1,rtu:14,address:2052" x="-220.46454" stroke-width="1px" line-height="125%">0.0
+					<title>RTU014_YC00234(2#PT柜保护_Uab1)</title>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" y="551.2074" x="-245.25473" font-family="Sans" line-height="125%">
+					<tspan y="551.2074" x="-245.25473">Ub:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU014_YC00235(2#PT柜保护_Ubc1)" limitstatus="0" value="0" y="551.28979" iv="1" pointmap="yc:station:1,no:235,channel:1,rtu:14,address:2053" x="-220.46454" stroke-width="1px" class="analogtext">0.0
+					<title>RTU014_YC00235(2#PT柜保护_Ubc1)</title>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" y="567.2074" x="-245.25473" font-family="Sans" line-height="125%">
+					<tspan>Uc:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" title="RTU014_YC00236(2#PT柜保护_Uca1)" class="analogtext" limitstatus="0" value="0" y="567.28979" iv="1" pointmap="yc:station:1,no:236,channel:1,rtu:14,address:2054" x="-220.46454" stroke-width="1px" line-height="125%">0.0
+					<title>RTU014_YC00236(2#PT柜保护_Uca1)</title>
+				</text>
+			</g>
+			<g stroke-width="1" transform="matrix(-1 0 0 -1 1736.7 507.95)">
+				<use transform="translate(559.97,226.85)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+				<use transform="translate(535.97,154.85)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+			</g>
+			<path d="m1164.8 192.22v28.999h-28.596" stroke-width="1px" fill="none"></path>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:259,channel:1,rtu:4,address:1" title="1#电容器开关柜">
+		<title>1#电容器开关柜</title>
+		<use transform="matrix(-1 0 0 -1 319.14 116.75)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="matrix(-1 0 0 -1 902.64 466.36)">
+			<use flash="false" title="RTU004_YX00263(1#电容器保护_接地刀位置遥信)" class="switch" pointmap="yx:station:1,no:263,channel:1,rtu:4,address:5" transform="translate(595.38,296)" value="0" iv="1" width="100%" y="0" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU004_YX00263(1#电容器保护_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:263,channel:1,rtu:4,address:5"></use>
+		</g>
+		<path d="m345.63 169.88h-75" stroke-width="1px" fill="none"></path>
+		<g>
+			<g stroke-width="1.5" transform="matrix(-1 0 0 -1 874.3 556.36)">
+				<use transform="matrix(1,0,0,-1,555.17,481.62)" height="100%" width="100%" y="0" x="0" xlink:href="#cable-terminal"></use>
+				<use transform="translate(531.19,469.62)" height="100%" width="100%" y="0" x="0" xlink:href="#reactor"></use>
+				<use transform="translate(531.17,509.62)" height="100%" width="100%" y="0" x="0" xlink:href="#capacitor-bank"></use>
+			</g>
+			<use flash="false" title="RTU004_YX00261(1#电容器保护_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:261,channel:1,rtu:4,address:3" transform="matrix(-1 0 0 -1 325.14 396.36)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley">
+				<title>RTU004_YX00261(1#电容器保护_小车工作位置遥信)</title>
+			</use>
+			<use height="100%" flash="true" title="RTU004_YX00259(1#电容器保护_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:259,channel:1,rtu:4,address:1" transform="matrix(-1 0 0 -1 343.14 378.36)" click="func-yktoolbar" eventpoint="yk:station:1,no:107,channel:1,rtu:4,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+				<title>RTU004_YX00259(1#电容器保护_断路器合闸位置遥信)</title>
+			</use>
+		</g>
+		<g stroke-width="1.5" transform="matrix(-1 0 0 -1 778.24 385.08)">
+			<g transform="translate(-1.2296,12)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-1.2296,28.501)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-1.2296,45.002)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+		</g>
+		<use transform="matrix(-1 0 0 -1 381.64 169.83)" height="100%" width="100%" y="0" x="0" stroke-width="2" xlink:href="#lightning"></use>
+		<use transform="matrix(-1 0 0 -1 357.64 98.503)" height="100%" width="100%" y="0" x="0" stroke-width="2.2" xlink:href="#Ground"></use>
+		<path d="m307.13 116.75v124.14h0.29658" stroke-width="1px" fill="none"></path>
+		<g font-size="12.5px" transform="translate(-164.4 75.564)" stroke-width="1">
+			<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU004_YC00052(1#电容器保护_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:52,channel:1,rtu:4,address:2049" x="502.78137" stroke-width="1">0.0
+				<title>RTU004_YC00052(1#电容器保护_IA)</title>
+			</text>
+			<g transform="translate(0 -2.0183)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ib:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU004_YC00053(1#电容器保护_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:53,channel:1,rtu:4,address:2050" x="502.78137" stroke-width="1">0.0
+					<title>RTU004_YC00053(1#电容器保护_IB)</title>
+				</text>
+			</g>
+			<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan stroke-width="1">Ic:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU004_YC00054(1#电容器保护_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:54,channel:1,rtu:4,address:2051" x="502.78137" stroke-width="1">0.0
+				<title>RTU004_YC00054(1#电容器保护_IC)</title>
+			</text>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:988,channel:1,rtu:13,address:1" title="2#电容器开关柜">
+		<title>2#电容器开关柜</title>
+		<use transform="matrix(-1 0 0 -1 990.1 118.53)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g transform="rotate(180 786.8 234.08)" stroke-width="1.5">
+			<use y="0" title="RTU013_YX00992(2#电容器保护_接地刀位置遥信)" flash="false" transform="translate(595.38,296)" value="0" height="100%" width="100%" pointmap="yx:station:1,no:992,channel:1,rtu:13,address:5" x="0" iv="1" class="switch" xlink:href="#y-disconnector-off">
+				<title>RTU013_YX00992(2#电容器保护_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:992,channel:1,rtu:13,address:5"></use>
+		</g>
+		<path d="m1016.6 171.67h-75" stroke-width="1px" fill="none"></path>
+		<g stroke-width="1px" transform="translate(685.6,3.5887)">
+			<g>
+				<g stroke-width="1.5" transform="rotate(180,429.83,277.28)">
+					<use transform="matrix(1,0,0,-1,555.17,481.62)" height="100%" width="100%" y="0" x="0" xlink:href="#cable-terminal"></use>
+					<use transform="translate(531.19,469.62)" height="100%" width="100%" y="0" x="0" xlink:href="#reactor"></use>
+					<use transform="translate(531.17,509.62)" height="100%" width="100%" y="0" x="0" xlink:href="#capacitor-bank"></use>
+				</g>
+				<use title="RTU013_YX00990(2#电容器保护_小车工作位置遥信)" flash="false" pointmap="yx:station:1,no:990,channel:1,rtu:13,address:3" transform="rotate(180,155.25,197.28)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley">
+					<title>RTU013_YX00990(2#电容器保护_小车工作位置遥信)</title>
+				</use>
+				<use title="RTU013_YX00988(2#电容器保护_断路器合闸位置遥信)" flash="true" pointmap="yx:station:1,no:988,channel:1,rtu:13,address:1" transform="rotate(180,164.25,188.28)" height="100%" eventpoint="yk:station:1,no:415,channel:1,rtu:13,address:3073" width="100%" y="0" x="0" stroke-width="1" class="breaker" click="func-yktoolbar" xlink:href="#ybreaker">
+					<title>RTU013_YX00988(2#电容器保护_断路器合闸位置遥信)</title>
+				</use>
+			</g>
+			<g stroke-width="1.5" transform="rotate(180,381.8,191.64)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+		</g>
+		<g transform="rotate(180 997.15 322.14)" stroke-width="2">
+			<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+			<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+		</g>
+		<path d="m978.09 118.54v124.14h0.29658" stroke-width="1px" fill="none"></path>
+		<g font-size="12.5px" transform="translate(506.62,80.584)" stroke-width="1">
+			<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" title="RTU013_YC00215(2#电容器保护_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:215,channel:1,rtu:13,address:2049" x="502.78137" stroke-width="1" line-height="125%">0.0
+				<title>RTU013_YC00215(2#电容器保护_IA)</title>
+			</text>
+			<g transform="translate(0,-2.0183)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ib:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" title="RTU013_YC00216(2#电容器保护_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:216,channel:1,rtu:13,address:2050" x="502.78137" stroke-width="1" line-height="125%">0.0
+					<title>RTU013_YC00216(2#电容器保护_IB)</title>
+				</text>
+			</g>
+			<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan stroke-width="1">Ic:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" title="RTU013_YC00217(2#电容器保护_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:217,channel:1,rtu:13,address:2051" x="502.78137" stroke-width="1" line-height="125%">0.0
+				<title>RTU013_YC00217(2#电容器保护_IC)</title>
+			</text>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:358,channel:1,rtu:6,address:1" title="1#馈线1开关柜">
+		<title>1#馈线1开关柜</title>
+		<path d="m66.79 631.21v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(54.8,831.82)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(-528.7 454.21)">
+			<use flash="false" title="RTU006_YX00362(1#馈线保护1_接地刀位置遥信)" class="switch" pointmap="yx:station:1,no:362,channel:1,rtu:6,address:5" transform="translate(595.38,296)" value="0" iv="1" width="100%" y="0" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU006_YX00362(1#馈线保护1_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:362,channel:1,rtu:6,address:5"></use>
+		</g>
+		<path d="m28.3 750.69h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU006_YX00360(1#馈线保护1_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:360,channel:1,rtu:6,address:3" transform="translate(48.79 478.21)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley">
+			<title>RTU006_YX00360(1#馈线保护1_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU006_YX00358(1#馈线保护1_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:358,channel:1,rtu:6,address:1" transform="translate(30.79,496.21)" click="func-yktoolbar" eventpoint="yk:station:1,no:137,channel:1,rtu:6,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU006_YX00358(1#馈线保护1_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(-404.31 489.48)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(-949.4,278.07)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(-404.7 554.93)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU006_YC00088(1#馈线保护1_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:88,channel:1,rtu:6,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU006_YC00088(1#馈线保护1_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU006_YC00089(1#馈线保护1_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:89,channel:1,rtu:6,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU006_YC00089(1#馈线保护1_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU006_YC00090(1#馈线保护1_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:90,channel:1,rtu:6,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU006_YC00090(1#馈线保护1_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:451,channel:1,rtu:7,address:1" title="1#馈线2开关柜">
+		<title>1#馈线2开关柜</title>
+		<path d="m224.91 631.21v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(212.92,831.82)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(-370.58 454.21)">
+			<use flash="false" title="RTU007_YX00455(1#馈线保护2_接地刀位置遥信)" class="switch" pointmap="yx:station:1,no:455,channel:1,rtu:7,address:5" transform="translate(595.38,296)" value="0" iv="1" width="100%" y="0" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU007_YX00455(1#馈线保护2_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:455,channel:1,rtu:7,address:5"></use>
+		</g>
+		<path d="m186.42 750.69h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU007_YX00453(1#馈线保护2_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:453,channel:1,rtu:7,address:3" transform="translate(206.91 478.21)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley">
+			<title>RTU007_YX00453(1#馈线保护2_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU007_YX00451(1#馈线保护2_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:451,channel:1,rtu:7,address:1" transform="translate(188.91,496.21)" click="func-yktoolbar" eventpoint="yk:station:1,no:180,channel:1,rtu:7,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU007_YX00451(1#馈线保护2_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(-246.19 489.48)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(-791.28,278.07)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(-247.02 552.46)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU007_YC00107(1#馈线保护2_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:107,channel:1,rtu:7,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU007_YC00107(1#馈线保护2_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU007_YC00108(1#馈线保护2_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:108,channel:1,rtu:7,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU007_YC00108(1#馈线保护2_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU007_YC00109(1#馈线保护2_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:109,channel:1,rtu:7,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU007_YC00109(1#馈线保护2_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:544,channel:1,rtu:8,address:1" title="1#馈线3开关柜">
+		<title>1#馈线3开关柜</title>
+		<path d="m383.04 631.21v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(371.05 831.82)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(-212.45 454.21)">
+			<use flash="false" title="RTU008_YX00548(1#馈线保护3_接地刀位置遥信)" class="switch" pointmap="yx:station:1,no:548,channel:1,rtu:8,address:5" transform="translate(595.38,296)" value="0" iv="1" width="100%" y="0" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU008_YX00548(1#馈线保护3_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:548,channel:1,rtu:8,address:5"></use>
+		</g>
+		<path d="m344.55 750.69h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU008_YX00546(1#馈线保护3_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:546,channel:1,rtu:8,address:3" transform="translate(365.04 478.2)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley">
+			<title>RTU008_YX00546(1#馈线保护3_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU008_YX00544(1#馈线保护3_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:544,channel:1,rtu:8,address:1" transform="translate(347.04 496.2)" click="func-yktoolbar" eventpoint="yk:station:1,no:223,channel:1,rtu:8,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU008_YX00544(1#馈线保护3_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(-88.061 489.48)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(-633.15 278.07)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(-86.47 552.87)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU008_YC00126(1#馈线保护3_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:126,channel:1,rtu:8,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU008_YC00126(1#馈线保护3_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU008_YC00127(1#馈线保护3_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:127,channel:1,rtu:8,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU008_YC00127(1#馈线保护3_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU008_YC00128(1#馈线保护3_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:128,channel:1,rtu:8,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU008_YC00128(1#馈线保护3_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:637,channel:1,rtu:9,address:1" title="母联柜">
+		<title>母联柜</title>
+		<use flash="false" title="RTU009_YX00639(母联保护_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:639,channel:1,rtu:9,address:3" transform="translate(639.78 478.97)" height="100%" width="100%" y="0" x="0" stroke-width="1" xlink:href="#trolley">
+			<title>RTU009_YX00639(母联保护_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU009_YX00637(母联保护_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:637,channel:1,rtu:9,address:1" transform="translate(621.78 496.97)" click="func-yktoolbar" eventpoint="yk:station:1,no:266,channel:1,rtu:9,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU009_YX00637(母联保护_断路器合闸位置遥信)</title>
+		</use>
+		<g stroke-width="1.5" transform="translate(186.68 490.24)">
+			<g transform="translate(-1.2296,12)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-1.2296,28.501)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-1.2296,45.002)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+		</g>
+		<g font-size="12.5px" transform="translate(182.85 542.21)" stroke-width="1">
+			<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU009_YC00145(母联保护_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:145,channel:1,rtu:9,address:2049" x="502.78137" stroke-width="1">0.0
+				<title>RTU009_YC00145(母联保护_IA)</title>
+			</text>
+			<g transform="translate(0 -2.0183)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ib:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU009_YC00146(母联保护_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:146,channel:1,rtu:9,address:2050" x="502.78137" stroke-width="1">0.0
+					<title>RTU009_YC00146(母联保护_IB)</title>
+				</text>
+			</g>
+			<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan stroke-width="1">Ic:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU009_YC00147(母联保护_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:147,channel:1,rtu:9,address:2051" x="502.78137" stroke-width="1">0.0
+				<title>RTU009_YC00147(母联保护_IC)</title>
+			</text>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:1087,channel:1,rtu:15,address:1" title="2#馈线1开关柜">
+		<title>2#馈线1开关柜</title>
+		<path d="m872.41 632.35v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(860.42,832.96)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(276.92 455.35)">
+			<use flash="false" y="0" title="RTU015_YX01091(2#馈线保护1_接地刀位置遥信)" class="switch" transform="translate(595.38,296)" value="0" iv="1" width="100%" pointmap="yx:station:1,no:1091,channel:1,rtu:15,address:5" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU015_YX01091(2#馈线保护1_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:1091,channel:1,rtu:15,address:5"></use>
+		</g>
+		<path d="m833.92 751.83h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU015_YX01089(2#馈线保护1_小车工作位置遥信)" pointmap="yx:station:1,no:1089,channel:1,rtu:15,address:3" transform="translate(854.41 479.35)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley">
+			<title>RTU015_YX01089(2#馈线保护1_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU015_YX01087(2#馈线保护1_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:1087,channel:1,rtu:15,address:1" transform="translate(836.41,497.35)" click="func-yktoolbar" eventpoint="yk:station:1,no:445,channel:1,rtu:15,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU015_YX01087(2#馈线保护1_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(401.31 490.62)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(-143.78,279.21)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(401.74 559.28)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU015_YC00251(2#馈线保护1_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:251,channel:1,rtu:15,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU015_YC00251(2#馈线保护1_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU015_YC00252(2#馈线保护1_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:252,channel:1,rtu:15,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU015_YC00252(2#馈线保护1_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU015_YC00253(2#馈线保护1_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:253,channel:1,rtu:15,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU015_YC00253(2#馈线保护1_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:1180,channel:1,rtu:16,address:1" title="2#馈线2开关柜">
+		<title>2#馈线2开关柜</title>
+		<path d="m1030.5 632.35v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(1018.6 832.96)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(435.05 455.35)">
+			<use flash="false" y="0" title="RTU016_YX01184(2#馈线保护2_接地刀位置遥信)" class="switch" transform="translate(595.38,296)" value="0" iv="1" width="100%" pointmap="yx:station:1,no:1184,channel:1,rtu:16,address:5" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU016_YX01184(2#馈线保护2_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" class="grounds" pointmap="yx:station:1,no:1184,channel:1,rtu:16,address:5"></use>
+		</g>
+		<path d="m992.05 751.83h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU016_YX01182(2#馈线保护2_小车工作位置遥信)" pointmap="yx:station:1,no:1182,channel:1,rtu:16,address:3" transform="translate(1012.5 479.35)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley">
+			<title>RTU016_YX01182(2#馈线保护2_小车工作位置遥信)</title>
+		</use>
+		<use height="100%" flash="true" title="RTU016_YX01180(2#馈线保护2_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:1180,channel:1,rtu:16,address:1" transform="translate(994.54,497.35)" click="func-yktoolbar" eventpoint="yk:station:1,no:488,channel:1,rtu:16,address:3073" width="100%" y="0" x="0" stroke-width="1" xlink:href="#ybreaker">
+			<title>RTU016_YX01180(2#馈线保护2_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(559.44 490.62)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(14.35,279.21)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(560.59 558.87)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU016_YC00270(2#馈线保护2_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:270,channel:1,rtu:16,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU016_YC00270(2#馈线保护2_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU016_YC00271(2#馈线保护2_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:271,channel:1,rtu:16,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU016_YC00271(2#馈线保护2_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU016_YC00272(2#馈线保护2_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:272,channel:1,rtu:16,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU016_YC00272(2#馈线保护2_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:1273,channel:1,rtu:17,address:1" title="2#馈线3开关柜">
+		<title>2#馈线3开关柜</title>
+		<path d="m1188.7 632.35v219.21" stroke-width="1.9409" fill="none"></path>
+		<use transform="translate(1176.7 832.96)" height="100%" width="100%" y="0" x="0" stroke-width="1.5" xlink:href="#cable-terminal"></use>
+		<g stroke-width="1.5" transform="translate(593.17 455.35)">
+			<use flash="false" y="0" title="RTU017_YX01277(2#馈线保护3_接地刀位置遥信)" class="switch" transform="translate(595.38,296)" value="0" iv="1" width="100%" pointmap="yx:station:1,no:1277,channel:1,rtu:17,address:5" x="0" height="100%" xlink:href="#y-disconnector-off">
+				<title>RTU017_YX01277(2#馈线保护3_接地刀位置遥信)</title>
+			</use>
+			<use transform="translate(619.39,366.25)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground" pointmap="yx:station:1,no:1277,channel:1,rtu:17,address:5" class="grounds"></use>
+		</g>
+		<path d="m1150.2 751.83h75" stroke-width="1px" fill="none"></path>
+		<use flash="false" title="RTU017_YX01275(2#馈线保护3_小车工作位置遥信)" pointmap="yx:station:1,no:1275,channel:1,rtu:17,address:3" transform="translate(1170.7 479.34)" height="100%" width="100%" y="0" x="0" stroke-width="1" class="trolley" xlink:href="#trolley">
+			<title>RTU017_YX01275(2#馈线保护3_小车工作位置遥信)</title>
+		</use>
+		<use stroke-width="1" eventpoint="yk:station:1,no:531,channel:1,rtu:17,address:3073" flash="true" title="RTU017_YX01273(2#馈线保护3_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:1273,channel:1,rtu:17,address:1" transform="translate(1152.7 497.34)" value="0" height="100%" width="100%" y="0" x="0" iv="1" click="func-yktoolbar" xlink:href="#ybreaker">
+			<title>RTU017_YX01273(2#馈线保护3_断路器合闸位置遥信)</title>
+		</use>
+		<g>
+			<g stroke-width="1.5" transform="translate(717.56 490.62)">
+				<g transform="translate(-1.2296,12)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,28.501)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-1.2296,45.002)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+			<g stroke-width="2" transform="translate(172.47 279.21)">
+				<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+				<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+			</g>
+			<g stroke-width="1" font-size="12.5px" transform="translate(719.55 554.46)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU017_YC00289(2#馈线保护3_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:289,channel:1,rtu:17,address:2049" x="502.78137" stroke-width="1">0.0
+					<title>RTU017_YC00289(2#馈线保护3_IA)</title>
+				</text>
+				<g transform="translate(0 -2.0183)">
+					<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+						<tspan stroke-width="1">Ib:</tspan>
+					</text>
+					<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU017_YC00290(2#馈线保护3_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:290,channel:1,rtu:17,address:2050" x="502.78137" stroke-width="1">0.0
+						<title>RTU017_YC00290(2#馈线保护3_IB)</title>
+					</text>
+				</g>
+				<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ic:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU017_YC00291(2#馈线保护3_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:291,channel:1,rtu:17,address:2051" x="502.78137" stroke-width="1">0.0
+					<title>RTU017_YC00291(2#馈线保护3_IC)</title>
+				</text>
+			</g>
+		</g>
+	</g>
+	<g class="baseline" pointmap="yx:station:1,no:316,channel:1,rtu:5,address:2" title="RTU005_YX00316(1#PT柜保护_小车试验位置)">
+		<title>RTU005_YX00316(1#PT柜保护_小车试验位置)</title>
+		<rect y="427.1" value="0" iv="1" height="5.8656" width="647.17" x="10.612" stroke-width="1.2235px"></rect>
+		<path d="m438.03 382.06v46" stroke-width="1px" fill="none"></path>
+		<path d="m558.45 478.2v-46" stroke-width="1px" fill="none"></path>
+		<path d="m307.15 380.37v46" stroke-width="1px" fill="none"></path>
+		<path d="m66.79 478.21v-46" stroke-width="1px" fill="none"></path>
+		<path d="m224.91 478.21v-46" stroke-width="1px" fill="none"></path>
+		<path d="m383.04 478.2v-46" stroke-width="1px" fill="none"></path>
+		<path d="m657.78 478.97v-46" stroke-width="1px" fill="none"></path>
+		<path d="m150.82 380.8v46" stroke-width="2">
+			<title></title>
+		</path>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:85,channel:1,rtu:2,address:1" title="1#低后备开关柜">
+		<title>1#低后备开关柜</title>
+		<use transform="matrix(-1 0 0 -1 163.32 54.943)" height="100%" width="100%" y="0" x="0" stroke-width="2" xlink:href="#cable-terminal"></use>
+		<g transform="translate(-37.357,1.8032)">
+			<path d="m188.18 220v-53.114" stroke-width="1.3716" fill="none"></path>
+			<g stroke-width="2">
+				<g transform="matrix(-1 0 0 -1 1116.2 638.2)">
+					<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+					<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+				</g>
+				<path fill="none" d="m188.18 167.08v-70.447"></path>
+				<path fill="none" d="m188.18 167.08h-48"></path>
+			</g>
+		</g>
+		<g stroke-width="2" transform="translate(-37.357,1.8032)">
+			<use eventpoint="yk:station:1,no:21,channel:1,rtu:1,address:3093" class="onloadtransformer" transform="matrix(1,0,0,-1,152.18,110.54)" height="100%" click="func-yttoolbar" width="100%" y="0" x="0" xlink:href="#onloadtransformer2"></use>
+			<use flash="false" title="RTU002_YX00087(1#低后备保护_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:87,channel:1,rtu:2,address:3" transform="matrix(-1,0,0,-1,206.18,395)" height="100%" width="100%" y="0" x="0" xlink:href="#trolley">
+				<title>RTU002_YX00087(1#低后备保护_小车工作位置遥信)</title>
+			</use>
+			<use flash="true" title="RTU002_YX00085(1#低后备保护_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:85,channel:1,rtu:2,address:1" transform="matrix(-1,0,0,-1,224.18,377)" height="100%" eventpoint="yk:station:1,no:35,channel:1,rtu:2,address:3073" width="100%" y="0" x="0" click="func-yktoolbar" xlink:href="#ybreaker">
+				<title>RTU002_YX00085(1#低后备保护_断路器合闸位置遥信)</title>
+			</use>
+		</g>
+		<g stroke-width="2" transform="matrix(-1 0 0 -1 259.98 489.34)">
+			<g transform="translate(-363.17,115.82)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-363.17,131.82)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-363.17,147.82)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+			<g transform="translate(-363.17,163.82)">
+				<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+			</g>
+		</g>
+		<g font-size="12.5px" transform="translate(-319.16 60.934)" stroke-width="1">
+			<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU002_YC00018(1#低后备保护_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:18,channel:1,rtu:2,address:2049" x="502.78137" stroke-width="1">0.0
+				<title>RTU002_YC00018(1#低后备保护_IA)</title>
+			</text>
+			<g transform="translate(0 -2.0183)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ib:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU002_YC00019(1#低后备保护_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:19,channel:1,rtu:2,address:2050" x="502.78137" stroke-width="1">0.0
+					<title>RTU002_YC00019(1#低后备保护_IB)</title>
+				</text>
+			</g>
+			<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan stroke-width="1">Ic:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU002_YC00020(1#低后备保护_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:20,channel:1,rtu:2,address:2051" x="502.78137" stroke-width="1">0.0
+				<title>RTU002_YC00020(1#低后备保护_IC)</title>
+			</text>
+		</g>
+	</g>
+	<text font-size="12.5px" font-family="Sans" style="word-spacing:0px;letter-spacing:0px" class="svg-change" stroke="#0000ff" line-height="125%" y="21.367872" x="100.85031" stroke-width="1px" click="接线图/35KV" fill="#0000ff">
+		<tspan>至35kV变压器</tspan>
+	</text>
+	<text font-size="12.5px" font-family="Sans" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="419.16318" x="1185.9283" font-weight="bold" fill="#0000f7">
+		<tspan y="419.16318" x="1185.9283">10kVII段母线</tspan>
+	</text>
+	<g class="baseline" pointmap="yx:station:1,no:1045,channel:1,rtu:14,address:2" title="RTU014_YX01045(2#PT柜保护_小车试验位置)">
+		<title>RTU014_YX01045(2#PT柜保护_小车试验位置)</title>
+		<path d="m657.78 568.97v133.55h96v-273.55" stroke-width="1.2048" fill="none"></path>
+		<rect stroke-width="1.1084px" y="428.97" value="0" iv="1" width="530.76" x="753.78" height="5.8656"></rect>
+		<path d="m1109 383.85v46" stroke-width="1px" fill="none"></path>
+		<path d="m978.11 382.16v46" stroke-width="1px" fill="none"></path>
+		<path d="m872.41 479.35v-46" stroke-width="1px" fill="none"></path>
+		<path d="m1030.5 479.35v-46" stroke-width="1px" fill="none"></path>
+		<path d="m1188.7 479.34v-46" stroke-width="1px" fill="none"></path>
+		<path d="m821.78 382.59v46" stroke-width="2" fill="none"></path>
+	</g>
+	<g class="cabinet" pointmap="yx:station:1,no:814,channel:1,rtu:11,address:1" title="2#低后备开关柜">
+		<title>2#低后备开关柜</title>
+		<use transform="matrix(-1 0 0 -1 834.28 58.729)" height="100%" width="100%" y="0" x="0" stroke-width="2" xlink:href="#cable-terminal"></use>
+		<g>
+			<path d="m821.78 225.59v-53.114" stroke-width="1.3716" fill="none"></path>
+			<g stroke-width="2">
+				<g transform="matrix(-1 0 0 -1 1751.8 645.79)">
+					<use transform="translate(941.7,472.67)" height="100%" width="100%" y="0" x="0" xlink:href="#lightning"></use>
+					<use transform="translate(965.7,544)" height="100%" width="100%" y="0" x="0" xlink:href="#Ground"></use>
+				</g>
+				<path d="m821.78 172.67v-70.447" fill="none"></path>
+				<path d="m821.78 172.67h-48" fill="none"></path>
+			</g>
+		</g>
+		<g stroke-width="2">
+			<use width="100%" class="onloadtransformer" transform="matrix(1 0 0 -1 785.78 116.13)" height="100%" eventpoint="yk:station:1,no:327,channel:1,rtu:11,address:3073" y="0" x="0" click="func-yttoolbar" xlink:href="#onloadtransformer2"></use>
+			<use flash="false" title="RTU011_YX00816(2#低后备保护_小车工作位置遥信)" class="trolley" pointmap="yx:station:1,no:816,channel:1,rtu:11,address:3" transform="matrix(-1 0 0 -1 839.78 398.59)" height="100%" width="100%" y="0" x="0" xlink:href="#trolley">
+				<title>RTU011_YX00816(2#低后备保护_小车工作位置遥信)</title>
+			</use>
+			<use eventpoint="yk:station:1,no:343,channel:1,rtu:11,address:3073" flash="true" title="RTU011_YX00814(2#低后备保护_断路器合闸位置遥信)" class="breaker" pointmap="yx:station:1,no:814,channel:1,rtu:11,address:1" transform="matrix(-1 0 0 -1 857.78 380.59)" height="100%" click="func-yktoolbar" width="100%" y="0" x="0" xlink:href="#ybreaker">
+				<title>RTU011_YX00814(2#低后备保护_断路器合闸位置遥信)</title>
+			</use>
+			<g transform="matrix(-1 0 0 -1 930.94 491.13)">
+				<g transform="translate(-363.17,115.82)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-363.17,131.82)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-363.17,147.82)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+				<g transform="translate(-363.17,163.82)">
+					<use transform="translate(435.06,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(485.61,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+					<use transform="translate(460.33,84.724)" height="100%" width="100%" y="0" x="0" xlink:href="#ct"></use>
+				</g>
+			</g>
+		</g>
+		<g font-size="12.5px" transform="translate(349.3 69.46)" stroke-width="1">
+			<text style="word-spacing:0px;letter-spacing:0px" y="114.17106" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan y="114.17106" x="479.99118" stroke-width="1">Ia:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU011_YC00181(2#低后备保护_IA)" class="analogtext" limitstatus="0" value="0" iv="1" y="114.25346" pointmap="yc:station:1,no:181,channel:1,rtu:11,address:2049" x="502.78137" stroke-width="1">0.0
+				<title>RTU011_YC00181(2#低后备保护_IA)</title>
+			</text>
+			<g transform="translate(0 -2.0183)">
+				<text style="word-spacing:0px;letter-spacing:0px" y="134.17108" x="479.99118" font-family="Sans" line-height="125%">
+					<tspan stroke-width="1">Ib:</tspan>
+				</text>
+				<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU011_YC00182(2#低后备保护_IB)" class="analogtext" flash="false" limitstatus="0" value="0" iv="1" y="134.25348" pointmap="yc:station:1,no:182,channel:1,rtu:11,address:2050" x="502.78137" stroke-width="1">0.0
+					<title>RTU011_YC00182(2#低后备保护_IB)</title>
+				</text>
+			</g>
+			<text style="word-spacing:0px;letter-spacing:0px" y="150.17108" x="479.99118" font-family="Sans" line-height="125%">
+				<tspan stroke-width="1">Ic:</tspan>
+			</text>
+			<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" title="RTU011_YC00183(2#低后备保护_IC)" class="analogtext" limitstatus="0" value="0" iv="1" y="150.25348" pointmap="yc:station:1,no:183,channel:1,rtu:11,address:2051" x="502.78137" stroke-width="1">0.0
+				<title>RTU011_YC00183(2#低后备保护_IC)</title>
+			</text>
+		</g>
+	</g>
+	<text font-size="12.5px" font-family="Sans" style="word-spacing:0px;letter-spacing:0px" class="svg-change" stroke="#0000ff" line-height="125%" y="22.956978" x="772.82343" stroke-width="1px" click="接线图/35KV" fill="#0000ff">
+		<tspan y="22.956978" x="772.82343">至35kV变压器</tspan>
+	</text>
+</svg>

@@ -1,0 +1,256 @@
+/*
+工具条样式
+}
+*/
+svg *[click]{
+	cursor:pointer;
+}
+
+svg  .css-line[mover="1"]{
+	stroke:blue !important;
+}
+
+svg  .css-polyline[mover="1"]{
+	stroke:blue !important;
+}
+
+svg  .css-polygon[mover="1"]{
+	stroke:blue !important;
+	fill:blue !important;
+}
+
+svg  .css-ellipse[mover="1"]{
+	stroke:blue !important;
+	fill:blue !important;
+}
+/*设置文本风格*/
+svg  .css-rect[mover="1"]{
+	stroke:blue !important;
+	fill:blue !important;
+}
+svg  .css-text[mover="1"]{
+	fill:red !important;
+}
+/*设置组合图元的子图元的线颜色*/
+svg  .css-symbol[mover="1"] *{
+	stroke:blue !important;
+}
+/*
+开关柜样式
+
+svg .cabinet{
+	stroke:lightgray;
+    fill:gray;
+}
+svg .cabinet[value="0"][iv="0"]{
+	stroke:green;
+	fill:green;
+}
+svg .cabinet[iv="0"]:not([value="0"]){
+	stroke:#800000;
+	fill:red;
+}
+svg .cabinet:not([iv="0"]){
+	stroke:gray;
+	fill:gray;
+}
+*/
+/*
+开关样式
+
+svg .switch{
+	fill:none;
+	stroke:#000;
+}
+svg .switch[iv="0"]{
+	stroke:green;
+}
+svg .switch[iv="0"]:not([value="0"]){
+	stroke:red;
+}
+svg .switch:not([iv="0"]){
+	stroke:gray;
+}*/
+/*
+刀闸样式
+
+svg .disconnector{
+	fill:none;
+	stroke:#000;
+}
+svg .disconnector[iv="0"]{
+	stroke:green;
+}
+svg .disconnector[iv="0"]:not([value="0"]){
+	stroke:red;
+}
+svg .disconnector:not([iv="0"]){
+	stroke:gray;
+}
+*/
+/*
+断路器样式
+
+svg .breaker{
+    fill:none;
+	stroke:#000;
+}
+svg .breaker[iv="0"]{
+	stroke:green;
+	fill:green;
+}
+svg .breaker[iv="0"]:not([value="0"]){
+	stroke:#800000;
+	fill:red;
+}
+svg .breaker:not([iv="0"]){
+	stroke:lightgray !important;
+	fill:gray !important;
+}*/
+/*
+手车样式
+
+svg .trolley{
+	stroke:lightgray;
+    fill:gray;
+}
+svg .trolley[value="0"][iv="0"]{
+	stroke:green;
+	fill:green;
+}
+svg .trolley[iv="0"]:not([value="0"]){
+	stroke:red;
+	fill:red;
+}
+svg .trolley[iv="1"]{
+	stroke:gray !important;
+	fill:gray !important;
+}*/
+/*
+信号灯样式
+可用于通信状态
+
+svg .lamp{
+	stroke:lightgray;
+    fill:gray;
+}
+svg .lamp[value="0"][iv="0"]{
+	stroke:green;
+	fill:green;
+}
+svg .lamp[iv="0"]:not([value="0"]){
+	stroke:#800000;
+	fill:red;
+}
+svg .lamp:not([iv="0"]){
+	stroke:lightgray !important;
+	fill:gray !important;
+}*/
+/*
+模拟量文本样式
+
+svg .analogtext{
+	fill:#FF9900;
+	color:#FF9900;	
+	text-anchor:start;
+	font-family:sans;
+	font-style:normal;
+	font-weight:600;
+	stroke:none;
+}
+svg .analogtext:not([iv="0"]){
+	fill:gray !important;
+	color:gray !important;
+}
+
+svg .analogtext[iv="0"]:not([limitstatus="0"]){
+	fill:red;
+	color:red;
+}*/
+/*
+母线样式
+
+svg .baseline{
+	stroke:lightgray;
+	fill:gray;
+	fill-opacity:1;
+}
+svg .baseline[value="0"][iv="0"]{
+	stroke:red;
+	fill:red;
+}
+svg .baseline[iv="0"]:not([value="0"]){
+	stroke:#800000;
+	fill:red;
+}
+svg .baseline:not([iv="0"]){
+	stroke:lightgray !important;
+	fill:gray !important;
+}
+*/
+/*
+文件导航
+
+svg .svg-change{
+	text-decoration:underline;
+	cursor:pointer;
+}
+*/
+/*
+有载调压变压器
+*/
+svg .onloadtransformer{
+}
+
+/*
+开关样式
+
+svg .grounds{
+	fill:none;
+	stroke:#000;
+}
+svg .grounds[iv="0"]{
+	stroke:green;
+}
+svg .grounds[iv="0"]:not([value="0"]){
+	stroke:red;
+}
+svg .grounds:not([iv="0"]){
+	stroke:gray !important;
+}
+*/
+/*
+文本切换样式
+
+svg .chtext{
+	text-anchor:start;
+	font-family:sans;
+	font-style:normal;
+	font-weight:600;
+	color:#FF9900;	
+	fill:#FF9900;
+	stroke:none !important;
+}
+svg .chtext:not([iv="0"]){
+	fill:gray !important;
+}
+*/
+/* 图元选择 */
+div.svg-selected {
+	outline: 1px dotted #f00;
+	position:absolute; 
+	opacity:0.5; 
+	background-color:#00f;
+	pointer-events: none;
+}
+
+/*
+图元切换
+
+svg [flag="on"]:not([value="1"]){
+	visibility:hidden;
+}
+svg [flag="off"]:not([value="0"]){
+	visibility:hidden;
+}
+*/
