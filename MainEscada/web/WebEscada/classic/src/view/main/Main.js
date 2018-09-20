@@ -82,7 +82,9 @@ Ext.define('WebEscada.view.main.Main', {
         region: 'center',
         xtype: 'panel', // TabPanel itself has no title
         id: 'content_panel',
-        cls: 'esacada-content'
-//        activeTab: 0      // First tab active by default
+        cls: 'esacada-content',
+        reference: 'mainCardPanel',
+        layout: 'card',
+        activeTab: 0      // First tab active by default
     }]
 });

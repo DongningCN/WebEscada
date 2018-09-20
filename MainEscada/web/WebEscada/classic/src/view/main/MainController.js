@@ -10,10 +10,25 @@ Ext.define('WebEscada.view.main.MainController', {
 
     requires: [
     	'WebEscada.view.login.Login',
-        'WebEscada.view.svg.Svg'
+        'WebEscada.view.svg.Svg',
+        'WebEscada.view.runtime.Runtime'
     ],
     lastView: null,
     isLogin:false,
+    listen: {
+    	controller: {
+    		'#': {
+    			unmatchedroute: 'onRouteChange'
+    		}
+    	}
+    },
+    routes: {
+    	':node': 'onRouteChange'
+    },
+    
+    onRouteChange: function(id){
+        this.setCurrentView(id);
+    },
 
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
@@ -25,6 +40,58 @@ Ext.define('WebEscada.view.main.MainController', {
         }
     },
     
+    RouteChange: function (route) {
+        if (route) {
+            this.redirectTo(route);
+        }
+    },
+    
+    setCurrentView: function(hashTag) {
+    	console.log('setCurrentView: '+hashTag);
+        hashTag = (hashTag || '').toLowerCase();
+        if (!this.isLogin && hashTag !== 'login') return;
+        var me = this,
+        refs = me.getReferences(),
+        mainCard = refs.mainCardPanel,
+        mainLayout = mainCard.getLayout(),
+        view = (hashTag=='login' || hashTag=='svg-diagram' || hashTag=='runtime-data')
+        	? hashTag : 'page404',
+        lastView = me.lastView,
+        existingItem = mainCard.child('component[routeId=' + hashTag + ']'),
+        newView;
+        // Kill any previously routed window
+        if (lastView && lastView.isWindow) {
+            lastView.destroy();
+        }
+        lastView = mainLayout.getActiveItem();
+        if (!existingItem) {
+            newView = Ext.create({
+                xtype: view,
+                id: hashTag,
+                routeId: hashTag,
+                hideMode: 'offsets'
+            }); 	
+        }
+        if (!newView || !newView.isWindow) {
+            if (existingItem) {
+                if (existingItem !== lastView) {
+                    mainLayout.setActiveItem(existingItem);
+                }
+                newView = existingItem;
+            }
+            else {
+                Ext.suspendLayouts();
+                mainLayout.setActiveItem(mainCard.add(newView));
+                Ext.resumeLayouts(true);
+            }
+        }
+        if (newView.isFocusable(true)) {
+            newView.focus();
+        }
+    	
+        this.lastView = newView;
+        
+    },
     onMainViewRender: function () {
         var me = this;
         Ext.Msg.wait(I18N.GetUserInfo);
@@ -119,25 +186,12 @@ Ext.define('WebEscada.view.main.MainController', {
     	Menu.menu.add(arr);
     	toolbar.add(Menu);
     	arr = arr.concat(['->',Logout,UserName]);
-    	console.log(arr);
+    	//console.log(arr);
     	toolbar.add(arr);
     	//加载默认模块
     	var navigation = Ext.getCmp('left_navigation');
     	navigation.activeModule = "主接线图";
     	this.Navigation();
-    },
-    setCurrentView: function(hashTag) {
-    	console.log(hashTag);
-        hashTag = (hashTag || '').toLowerCase();
-        if (!this.isLogin && hashTag !== 'login') return;
-        
-        var newView = Ext.create({
-            xtype: hashTag,
-            routeId: hashTag,
-            hideMode: 'offsets'
-        });
-        this.lastView = newView;
-        
     },
     //相应模块点击事件
     onWiringDiagram: function(btn){
@@ -150,7 +204,8 @@ Ext.define('WebEscada.view.main.MainController', {
     	navigation.setTitle(btn.text);
     	navigation.activeModule = btn.text;
     	//加载默认模块
-    	this.Navigation();
+    	this.RouteChange("svg-diagram");
+//    	this.Navigation();
     },
     onRunTimeData: function(btn,scope){
     	var navigation = Ext.getCmp('left_navigation');
@@ -160,6 +215,7 @@ Ext.define('WebEscada.view.main.MainController', {
     	root.appendChild(arrRuntimeData);
     	navigation.setTitle(btn.text);
     	navigation.activeModule = btn.text;
+    	this.RouteChange("runtime-data");
     },
     onHistoryData: function(btn,scope){
     	var navigation = Ext.getCmp('left_navigation');
@@ -233,20 +289,16 @@ Ext.define('WebEscada.view.main.MainController', {
     },
     
 	Navigation:function(filename){
-		var contentPanel = Ext.getCmp('content_panel');
 		var me = this;
 		//销毁websocket
 		var diagram = {};
-		var svgdom = document.getElementById('SvgMain');;
+		var svgdom = document.getElementById('SvgMain');
 		if(svgdom)
 		{
 			eGraph_DestroyWebsocket(svgdom);//销毁前svg节点的websocket
 		}
-    	contentPanel.removeAll(true);
-    	var svg = Ext.widget('svg-diagram',{id:'svg_diagram'});
-    	contentPanel.add(svg);
     	var navigation = Ext.getCmp('left_navigation');
-    	navigation.setTitle(filename);
+    	navigation.setTitle(filename?filename:navigation.activeModule);
 //    	var strpath = URI.getEvg() + (filename ? filename : "main.evg");// + '.evg';
     	var strpath = URI.getEvg() + (filename ? filename : EscadaConfig.getDefaultNavigation(navigation.activeModule));
 		Ext.Ajax.request({
@@ -256,11 +308,15 @@ Ext.define('WebEscada.view.main.MainController', {
 		    	 var xmlDoc = response.responseXML;
 			   		if(xmlDoc!=null)
 		   			{
+			   			var svg = Ext.getCmp('svg-diagram');
 			   			svg.svgRoot = svgdom = xmlDoc.getElementsByTagName("svg")[0];
 			   			svgdom.id = "SvgMain";
 			   			if(svgdom != null && svgdom.childNodes && svgdom.childNodes.length > 0) 
 		   				{
 			   				diagram = document.getElementById("diagram");
+			   				for(var i=0;i<diagram.children.length;i++){
+			   					diagram.removeChild(diagram.children[i]);
+			   				}
 			   				diagram.appendChild(svgdom);
 			   				svg.getController().rootInit(svgdom);
 			   				eGraph_Dynamicload(svgdom);
