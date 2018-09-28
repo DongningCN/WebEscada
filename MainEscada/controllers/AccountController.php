@@ -115,6 +115,7 @@ class AccountController extends Controller
 						'expanded'=> false,
 						//'iconCls'=> 'ux-file-icon',
 						'allowDrag'=> false,
+						'leaf' => false,
 						'children'=> $this->outTree( $item ,$dir.$key.'/')
 				);
 			} else {

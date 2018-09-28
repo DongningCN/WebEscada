@@ -11,8 +11,7 @@ Ext.define('WebEscada.view.main.Main', {
 
     requires: [
         'WebEscada.view.main.MainController',
-        'WebEscada.view.main.MainModel',
-        'WebEscada.view.navigation.Navigation'
+        'WebEscada.view.main.MainModel'
     ],
     keyMap: {
     	F11: 'onFullScreen',
@@ -32,13 +31,7 @@ Ext.define('WebEscada.view.main.Main', {
             id: 'top_toolbar',
             cls: 'esacada-headerbar',
             height: 64
-    }, {
-    	region: 'west',
-        id: 'left_navigation',
-        xtype: 'left-navigation',
-        ui: 'navigation',
-        cls: 'esacada-navigation'
-    }, {
+    },{
         region: 'south',
         xtype : 'toolbar',
         id: 'bottom_toobar',
@@ -73,18 +66,11 @@ Ext.define('WebEscada.view.main.Main', {
 			}
 		]
     }, {
-//        region: 'east',
-//        title: 'East Panel',
-//        collapsible: true,
-//        split: true,
-//        width: 150
-    }, {
         region: 'center',
-        xtype: 'panel', // TabPanel itself has no title
-        id: 'content_panel',
-        cls: 'esacada-content',
-        reference: 'mainCardPanel',
+        xtype: 'maincontainerwrap', // TabPanel itself has no title
+        id: 'main-view-detail-wrap',
         layout: 'card',
-        activeTab: 0      // First tab active by default
+        activeTab: 0,      // First tab active by default
+        reference: 'mainContainerWrap'
     }]
 });

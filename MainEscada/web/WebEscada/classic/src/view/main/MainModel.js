@@ -8,9 +8,6 @@ Ext.define('WebEscada.view.main.MainModel', {
     data: {
     	navigationTitle: '主接线图',
         UserName: 'chen'
-    },
-	stores: {
-
-	}
+    }
     //TODO - add data, formulas and/or methods to support your view
 });

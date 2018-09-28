@@ -1,3 +1,21 @@
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:953 */
+.x-btn-over .x-btn-gray-medium-tl,
+.x-btn-over .x-btn-gray-medium-bl,
+.x-btn-over .x-btn-gray-medium-tr,
+.x-btn-over .x-btn-gray-medium-br,
+.x-btn-over .x-btn-gray-medium-tc,
+.x-btn-over .x-btn-gray-medium-bc {
+    background-image: url(images/btn/btn-gray-medium-over-corners.gif);
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:961 */
+.x-btn-over .x-btn-gray-medium-ml,
+.x-btn-over .x-btn-gray-medium-mr {
+    background-image: url(images/btn/btn-gray-medium-over-sides.gif);
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:965 */
+.x-btn-over .x-btn-gray-medium-mc {
+    background-color: #888889;
+}
 /* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:977 */
 .x-btn-focus.x-btn-over .x-btn-gray-medium-tl,
 .x-btn-focus.x-btn-over .x-btn-gray-medium-bl,
@@ -6170,7 +6188,7 @@
 .x-button-header-small-cell > .x-grid-cell-inner >.x-btn-header-small {
     vertical-align: top;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:277 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:285 */
 .x-form-readonly input,
 .x-form-readonly textarea,
 .x-form-readonly .x-form-cb-default::before {

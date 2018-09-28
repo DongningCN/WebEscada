@@ -23,7 +23,7 @@
             		}
         		]
         	},{
-        		"text":"通道001","expanded":false,"allowDrag":false,
+        		"text":"通道001","expanded":true,"allowDrag":false,
         		"children":[
         			{
         			"text":"Rtu1",
@@ -90,8 +90,8 @@
         this.callParent(arguments);
     },
     
-    getDefaultNavigation: function (module) {
-    	if(module == "主接线图") {
+    getDefaultNavigation: function (id) {
+    	if(id == "svg_diagram") {
     		var arr = this.getEvgFileNavigation();
 	    	for(var i=0;i<arr.length;i++) {
 	    		if(arr[i].leaf && arr[i].id) {

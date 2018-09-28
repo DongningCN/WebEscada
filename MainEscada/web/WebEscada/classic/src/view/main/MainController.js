@@ -11,7 +11,8 @@ Ext.define('WebEscada.view.main.MainController', {
     requires: [
     	'WebEscada.view.login.Login',
         'WebEscada.view.svg.Svg',
-        'WebEscada.view.runtime.Runtime'
+        'WebEscada.view.runtime.Runtime',
+        'WebEscada.view.svg.Window'
     ],
     lastView: null,
     isLogin:false,
@@ -52,9 +53,10 @@ Ext.define('WebEscada.view.main.MainController', {
         if (!this.isLogin && hashTag !== 'login') return;
         var me = this,
         refs = me.getReferences(),
-        mainCard = refs.mainCardPanel,
+        mainCard = refs.mainContainerWrap,
         mainLayout = mainCard.getLayout(),
-        view = (hashTag=='login' || hashTag=='svg-diagram' || hashTag=='runtime-data')
+        view = (hashTag=='login' || hashTag=='svg' || hashTag=='runtime' || hashTag=='history' ||
+        	hashTag=='report' || hashTag=='system' || hashTag=='alarm' || hashTag=='device')
         	? hashTag : 'page404',
         lastView = me.lastView,
         existingItem = mainCard.child('component[routeId=' + hashTag + ']'),
@@ -114,7 +116,9 @@ Ext.define('WebEscada.view.main.MainController', {
                 EscadaConfig.setUserInfo(obj.data.UserInfo);
                 EscadaConfig.setEvgFileNavigation(arrSvgFile);
                 //根据角色加载相应模块
-                Ext.getCmp('left_navigation').getRootNode().appendChild(obj.data.Menu);
+                //var arrRuntimeData = Ext.clone(EscadaConfig.getRuntimeDataNavigation());
+                //Ext.getCmp('left_navigation').getRootNode().appendChild(arrRuntimeData);
+                
                 me.LoadModule(obj.data.Menu);
                 
                 Ext.Msg.wait(I18N.StateRestoreWait);
@@ -122,7 +126,7 @@ Ext.define('WebEscada.view.main.MainController', {
                 Ext.Msg.hide();
                 me.isLogin = true;
                 hash = window.location.hash.substr(1);
-                me.setCurrentView( (Ext.isEmpty(hash) || hash === 'login') ? "svg-diagram" : hash);
+                me.setCurrentView( (Ext.isEmpty(hash) || hash === 'login') ? "svg" : hash);
             },
             failure: FAILED.ajax,
             scope: me
@@ -188,146 +192,37 @@ Ext.define('WebEscada.view.main.MainController', {
     	arr = arr.concat(['->',Logout,UserName]);
     	//console.log(arr);
     	toolbar.add(arr);
-    	//加载默认模块
-    	var navigation = Ext.getCmp('left_navigation');
-    	navigation.activeModule = "主接线图";
-    	this.Navigation();
+
     },
+
     //相应模块点击事件
     onWiringDiagram: function(btn){
-    	//更新左边导航栏标题
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
-    	var arrSvgFile = Ext.clone(EscadaConfig.getEvgFileNavigation());
-    	root.appendChild(arrSvgFile);
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
-    	//加载默认模块
-    	this.RouteChange("svg-diagram");
-//    	this.Navigation();
+    	this.RouteChange("svg");
     },
     onRunTimeData: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
-    	var arrRuntimeData = Ext.clone(EscadaConfig.getRuntimeDataNavigation());
-    	root.appendChild(arrRuntimeData);
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
-    	this.RouteChange("runtime-data");
+    	this.RouteChange("runtime");
     },
     onHistoryData: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
+    	this.RouteChange("history");
     	alert("该功正在开发中……");
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
     },
     onReportMenager: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
+    	this.RouteChange("report");
     	alert("该功正在开发中……");
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
     },
     onSystemMonitor: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
+    	this.RouteChange("system");
     	alert("该功正在开发中……");
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
     },
     onAlarm: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
+    	this.RouteChange("alarm");
     	alert("该功正在开发中……");
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
     },
     onDeviceManager: function(btn,scope){
-    	var navigation = Ext.getCmp('left_navigation');
-    	var root = navigation.getRootNode();
-    	root.removeAll(true);
+    	this.RouteChange("device");
     	alert("该功正在开发中……");
-    	navigation.setTitle(btn.text);
-    	navigation.activeModule = btn.text;
     },
     
-	/*
-	 * 树节点点击事件响应函数
-	 * 该函数根据所选节点的text,自动加载图形文件。
-	 */
-    onItemSelect: function(tree, record, index, eOpts){
-    	var navigation = Ext.getCmp('left_navigation');
-		if (record.data.leaf){
-			if(record.data.id) {
-				if(navigation.activeModule == "主接线图") {
-					this.Navigation(record.data.id,record.data.text);
-				}else if(navigation.activeModule == "实时数据") {
-					
-				}
-			}
-		}
-    },
-    //只展开当前选中项
-    onItemexpand: function(node, eOpts){
-    	var pre = node.previousSibling;
-    	var next = node.nextSibling;
-    	while(pre) {
-    		pre.collapse();//上一节点收起
-    		pre = pre.previousSibling;
-    	}
-    	while(next) {
-    		next.collapse();//下一节点收起
-    		next = next.nextSibling;
-    	}
-    },
-    
-	Navigation:function(filename){
-		var me = this;
-		//销毁websocket
-		var diagram = {};
-		var svgdom = document.getElementById('SvgMain');
-		if(svgdom)
-		{
-			eGraph_DestroyWebsocket(svgdom);//销毁前svg节点的websocket
-		}
-    	var navigation = Ext.getCmp('left_navigation');
-    	navigation.setTitle(filename?filename:navigation.activeModule);
-//    	var strpath = URI.getEvg() + (filename ? filename : "main.evg");// + '.evg';
-    	var strpath = URI.getEvg() + (filename ? filename : EscadaConfig.getDefaultNavigation(navigation.activeModule));
-		Ext.Ajax.request({
-			method: 'POST',
-		     url: strpath,
-		     success: function(response, opts) {
-		    	 var xmlDoc = response.responseXML;
-			   		if(xmlDoc!=null)
-		   			{
-			   			var svg = Ext.getCmp('svg-diagram');
-			   			svg.svgRoot = svgdom = xmlDoc.getElementsByTagName("svg")[0];
-			   			svgdom.id = "SvgMain";
-			   			if(svgdom != null && svgdom.childNodes && svgdom.childNodes.length > 0) 
-		   				{
-			   				diagram = document.getElementById("diagram");
-			   				for(var i=0;i<diagram.children.length;i++){
-			   					diagram.removeChild(diagram.children[i]);
-			   				}
-			   				diagram.appendChild(svgdom);
-			   				svg.getController().rootInit(svgdom);
-			   				eGraph_Dynamicload(svgdom);
-		   				}
-		   			}
-		     },
-		     failure: function(response, opts) {
-		         console.log('server-side failure with status code ' + response.status);
-		     }
-		 });
-	},
 	//F11全屏时触发消息
     onFullScreen: function(el){
        	var head = Ext.getCmp('top_toolbar');
