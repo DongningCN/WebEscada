@@ -116,9 +116,6 @@ Ext.define('WebEscada.view.main.MainController', {
                 EscadaConfig.setUserInfo(obj.data.UserInfo);
                 EscadaConfig.setEvgFileNavigation(arrSvgFile);
                 //根据角色加载相应模块
-                //var arrRuntimeData = Ext.clone(EscadaConfig.getRuntimeDataNavigation());
-                //Ext.getCmp('left_navigation').getRootNode().appendChild(arrRuntimeData);
-                
                 me.LoadModule(obj.data.Menu);
                 
                 Ext.Msg.wait(I18N.StateRestoreWait);
@@ -181,11 +178,11 @@ Ext.define('WebEscada.view.main.MainController', {
     	var toolbar = Ext.getCmp('top_toolbar');
         var role = EscadaConfig.getUserInfo().Roles;
         if(role === "系统管理员"){
-        	arr = [Diagram,Runtime,History,Report,System,Alarm,Device];
+        	arr = [Diagram,Runtime,History,Report,Alarm,Device,System];
         }else if(role === "操作员"){//值班人员
-        	arr = [Diagram,Runtime,History,Report,System,Alarm];
+        	arr = [Diagram,Runtime,History,Report,Alarm],System;
         }else{//一般访客
-        	arr = [Diagram,Runtime,History,Report,System,Alarm];
+        	arr = [Diagram,Runtime,History,Report,Alarm,System];
         }
     	Menu.menu.add(arr);
     	toolbar.add(Menu);

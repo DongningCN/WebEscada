@@ -8,7 +8,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use phpDocumentor\Reflection\Types\Array_;
 use common\ExtJs;
-use common\models\User;
+use common\models\usercfg;
 use common\models\LoginForm;
 
 class StateController extends Controller

@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use phpDocumentor\Reflection\Types\Array_;
 use common\ExtJs;
-use common\models\User;
+use common\models\usercfg;
 use common\models\LoginForm;
 use Symfony\Component\CssSelector\Parser\Handler\IdentifierHandler;
 
@@ -18,6 +18,14 @@ class AccountController extends Controller
     protected $connection;
     public function actionUserinfo()
     {
+    	//证明已经连接上数据库库
+    	$connection=Yii::$app->db;
+    	//var_dump($connection);
+ 		$connection->open();
+	 	$command = $connection->createCommand('SELECT * FROM usercfg');
+	 	$posts = $command->queryAll();
+	 	//var_dump($posts);
+    	
         if(!Yii::$app->user->isGuest)//如果已经登录
         {
             return ExtJs::WriteObject(true,null,null,null,array(
@@ -30,7 +38,7 @@ class AccountController extends Controller
     }
 
     public function actionLogin()
-    {
+    { 	
         $arr = Yii::$app->request->post();
 		//var_dump($arr);
         $arr1['username'] = $arr['UserName'];

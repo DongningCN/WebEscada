@@ -21,7 +21,6 @@ Ext.define('WebEscada.view.svg.Navigation', {
     	itemexpand : 'onItemexpand',
     	select: 'onItemSelect',
     	beforerender: 'onBeforerender'
-    },
-    activeModule: ''
+    }
 
 });

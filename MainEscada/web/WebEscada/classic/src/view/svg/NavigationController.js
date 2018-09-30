@@ -42,7 +42,7 @@ Ext.define('WebEscada.view.svg.NavigationController', {
 			eGraph_DestroyWebsocket(svgdom);//销毁前svg节点的websocket
 		}
     	var navigation = this.getView();
-    	navigation.setTitle(filename?filename:navigation.activeModule);
+    	navigation.setTitle(filename?filename:navigation.title);
     	var strpath = URI.getEvg() + (filename ? filename : EscadaConfig.getDefaultNavigation("svg_diagram"));
 		Ext.Ajax.request({
 			method: 'POST',

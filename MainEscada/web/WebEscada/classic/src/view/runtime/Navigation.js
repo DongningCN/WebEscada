@@ -20,7 +20,6 @@ Ext.define('WebEscada.view.runtime.Navigation', {
     	itemexpand : 'onItemexpand',
     	select: 'onItemSelect',
     	beforerender: 'onBeforerender'
-    },
-    activeModule: ''
+    }
 
 });

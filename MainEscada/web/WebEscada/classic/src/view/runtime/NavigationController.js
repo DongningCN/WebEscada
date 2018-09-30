@@ -14,7 +14,7 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     onItemSelect: function(tree, record, index, eOpts){
 		if (record.data.leaf){
 			if(record.data.id && record.data.text) {
-				//this.Navigation(record.data.id,record.data.text);
+				this.Navigation(record.data.id,record.data.text);
 			}
 		}
     },
@@ -32,45 +32,16 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     	}
     },
     
-	Navigation:function(filename){
+	Navigation:function(type){
 		var me = this;
 		//销毁websocket
-		var diagram = {};
-		var svgdom = document.getElementById('SvgMain');
-		if(svgdom)
-		{
-			eGraph_DestroyWebsocket(svgdom);//销毁前svg节点的websocket
-		}
+
     	var navigation = this.getView();
-    	navigation.setTitle(filename?filename:navigation.activeModule);
-    	var strpath = URI.getEvg() + (filename ? filename : EscadaConfig.getDefaultNavigation("svg_diagram"));
-		Ext.Ajax.request({
-			method: 'POST',
-		     url: strpath,
-		     success: function(response, opts) {
-		    	 var xmlDoc = response.responseXML;
-			   		if(xmlDoc!=null)
-		   			{
-			   			var svg = Ext.getCmp('svg_diagram');
-			   			svg.svgRoot = svgdom = xmlDoc.getElementsByTagName("svg")[0];
-			   			svgdom.id = "SvgMain";
-			   			if(svgdom != null && svgdom.childNodes && svgdom.childNodes.length > 0) 
-		   				{
-			   				diagram = document.getElementById("diagram");
-			   				for(var i=0;i<diagram.children.length;i++){
-			   					diagram.removeChild(diagram.children[i]);
-			   				}
-			   				diagram.appendChild(svgdom);
-			   				svg.getController().rootInit(svgdom);
-			   				eGraph_Dynamicload(svgdom);
-		   				}
-		   			}
-		     },
-		     failure: function(response, opts) {
-		         console.log('server-side failure with status code ' + response.status);
-		     }
-		 });
+    	navigation.setTitle(type?type:navigation.title);
+//    	var strpath = URI.get(runtime,'read') + (type ? type : EscadaConfig.getDefaultNavigation("svg_diagram"));
+
 	},
+	
 	onBeforerender: function(Component, eOpts){
 		var dir = Ext.clone(EscadaConfig.getRuntimeDataNavigation());
 		this.getView().getRootNode().appendChild(dir);

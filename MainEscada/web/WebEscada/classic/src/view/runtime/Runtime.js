@@ -33,7 +33,7 @@ Ext.define('WebEscada.view.runtime.Runtime',{
 				},{
 					text	  : '查询',
 					tooltip   : '查询名称或描述中包含关键字的信息',
-					iconCls   : 'ux-icon-search',
+					iconCls   : 'ux-icon-search'
 				},'-',{
 					tooltip   : '打印',
 					action    :　'print',

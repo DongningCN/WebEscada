@@ -18,7 +18,7 @@ return [
             'csrfParam' => '_csrf-MainEscada',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\models\usercfg',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-MainEscada', 'httpOnly' => true],
         ],
