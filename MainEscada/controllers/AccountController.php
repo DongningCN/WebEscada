@@ -13,6 +13,19 @@ use common\models\usercfg;
 use common\models\LoginForm;
 use Symfony\Component\CssSelector\Parser\Handler\IdentifierHandler;
 
+use MainEscada\models\station;
+use MainEscada\models\yxcfg;
+use MainEscada\models\yccfg;
+use MainEscada\models\mccfg;
+use MainEscada\models\ytcfg;
+use MainEscada\models\ykcfg;
+use MainEscada\models\clcfg;
+use MainEscada\models\cacfg;
+use MainEscada\models\cmcfg;
+use MainEscada\models\channel;
+use MainEscada\models\rtu;
+use MainEscada\models\fixvalcfg;
+
 class AccountController extends Controller
 {
     protected $connection;
@@ -22,7 +35,7 @@ class AccountController extends Controller
     	$connection=Yii::$app->db;
     	//var_dump($connection);
  		$connection->open();
-	 	$command = $connection->createCommand('SELECT * FROM usercfg');
+	 	$command = $connection->createCommand('SELECT * FROM station');
 	 	$posts = $command->queryAll();
 	 	//var_dump($posts);
     	
@@ -30,7 +43,8 @@ class AccountController extends Controller
         {
             return ExtJs::WriteObject(true,null,null,null,array(
                 'UserInfo'=> array('UserName'=>"chen", 'Roles'=>'系统管理员'),
-                'Menu'=> $this->getMenu()
+                'Menu'=> $this->getMenu(),
+                'RtMenu' => $this->getRtMenu(),
             ));
         }
 
@@ -57,19 +71,9 @@ class AccountController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
-        return $this->goHome();
+        return ExtJs::WriteObject(false);//用户未登录
     }
     
-    private function connect()
-    {
-        $this->connection = new \yii\db\Connection([
-            'dsn' => 'mysql:host=localhost;dbname=logindb',
-            'username' => 'root',
-            'password' => 'dongning',
-        ]);
-        $this->connection->open();
-    }
     private function getMenu(){
     	$ret = array ();
     	$dir = './WebEscada/resources/wiringdiagram';
@@ -83,6 +87,149 @@ class AccountController extends Controller
 		} else {
 			return array ();
 		}
+    }
+    private function getRtMenu(){
+    	//厂站
+    	$st = new station();
+    	$station = $st::find()->all();
+		//var_dump($station[0]);
+    	$return = array ();
+    	$child = array ();
+    	$index  = 0;
+		for($i=0;$i<count($station);$i++) {
+			if($station[$i]['name'] == "系统数据"){
+				//var_dump($station[$i]['name']);
+				continue;
+			}
+	    	$stationid = 'flag:0:station:' . $station[$i]['no'] . ':';
+	    	$temp = new yxcfg();
+	    	$yx = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($yx) > 0){
+				$child [] = $temp->getNode($stationid . 'yx:-1');
+	    	}
+	    	$temp = new yccfg();
+	    	$yc = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($yc) > 0){
+	    		$child [] = $temp->getNode($stationid . 'yc:-1');
+	    	}
+	    	$temp = new mccfg();
+	    	$mc = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($mc) > 0){
+	    		$child [] = $temp->getNode($stationid . 'mc:-1');
+	    	}
+	    	$temp = new ytcfg();
+	    	$yt = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($yt) > 0){
+				$child [] = $temp->getNode($stationid . 'yt:-1');
+	    	}
+	    	$temp = new ykcfg();
+	    	$yk = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($yk) > 0){
+				$child [] = $temp->getNode($stationid . 'yk:-1');
+	    	}
+	    	$temp = new clcfg();
+	    	$cl = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($cl) > 0){
+				$child [] = $temp->getNode($stationid . 'cl:-1');
+	    	}
+	    	$temp = new cacfg();
+	    	$ca = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($ca) > 0){
+				$child [] = $temp->getNode($stationid . 'ca:-1');
+	    	}
+	    	$temp = new cmcfg();
+	    	$cm = $temp::findAll(['station' => $station[$i]['no']]);
+	    	if(count($cm) > 0){
+				$child [] = $temp->getNode($stationid . 'cm:-1');
+	    	}
+	    	
+			$return[$index] = array (
+					'text' => $station[$i]['name'] . '(' . $station[$i]['desc'] . ')',
+					'id' => $stationid,
+					'iconCls' => 'ux-icon-station',
+					'expanded' => false,
+					'children' => $child 
+			);
+			$index++;
+		}
+		//通道
+		$chchild = array ();
+		$ch = new channel();
+		$channel = $ch::find()->all();
+		//var_dump($channel);
+		for($i=0;$i<count($channel);$i++) {
+			if($channel[$i]['name'] == "虚拟通道"){
+				continue;
+			}
+			$channelid = sprintf("flag:1:channel:%d:no:-1:frtu:-1",$channel[$i]["no"]);
+			$return[$index] = array (
+					'text' => $channel[$i]['name'] . '(' . $channel[$i]['desc'] . ')',
+					'id' => $channelid,
+					'iconCls' => 'ux-icon-channel',
+					'expanded' => false,
+					'children' => array() 
+			);
+			$temp = new rtu();
+	    	$rtu = $temp::findAll(['channel' => $channel[$i]['no']]);
+	    	$rtuindex = 0;
+	    	for($j=0;$j<count($rtu);$j++) {
+				if($rtu[$j]['name'] == "虚拟RTU"){
+					continue;
+				}
+				$chrtus = &$return[$index]['children'];
+				$chrtus [$rtuindex] = array (
+						'text' => $rtu[$j]['name'] . '(' . $rtu[$j]['desc'] . ')',
+						'id' => sprintf("flag:1:channel:%d:no:%d:",$channel[$i]["no"],$rtu[$j]['no']),
+						'no' => $rtu[$j]["no"],
+						'iconCls' => 'ux-icon-rtu',
+						'expanded' => false,
+						'allowDrag' => false,
+						'children' => array() 
+				);
+				$rtuid = sprintf("flag:1:channel:%d:rtu:%d:yx:-1",$channel[$i]["no"],$rtu[$j]['no']);
+				$temp = new yxcfg();
+	    		$yx = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($yx) > 0){
+		    		$yxid = sprintf("flag:1:channel:%d:rtu:%d:yx:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($yxid);
+		    	}
+		    	$temp = new yccfg();
+		    	$yc = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($yc) > 0){
+		    		$ycid = sprintf("flag:1:channel:%d:rtu:%d:yc:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($ycid);
+		    	}
+		    	$temp = new mccfg();
+		    	$mc = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($mc) > 0){
+		    		$mcid = sprintf("flag:1:channel:%d:rtu:%d:mc:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($mcid);
+		    	}
+		    	$temp = new ytcfg();
+		    	$yt = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($yt) > 0){
+		    		$ytid = sprintf("flag:1:channel:%d:rtu:%d:yt:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($ytid);
+		    	}
+		    	$temp = new ykcfg();
+		    	$yk = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($yk) > 0){
+		    		$ykid = sprintf("flag:1:channel:%d:rtu:%d:yk:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($ykid);
+		    	}
+		    	$temp = new fixvalcfg();
+		    	$fix = $temp::findAll(['channel' => $channel[$i]['no'],'rtu' => $rtu[$j]['no']]);
+		    	if(count($fix) > 0){
+		    		$fixid = sprintf("flag:1:channel:%d:rtu:%d:ft:-1",$channel[$i]["no"],$rtu[$j]['no']);
+					$chrtus[$rtuindex] ['children'][] = $temp->getNode($fixid);
+		    	}
+		    	
+		    	$rtuindex++;
+	    	}
+	    	$index++;
+		}
+				
+		return $return;
     }
     
 	//队列方式 

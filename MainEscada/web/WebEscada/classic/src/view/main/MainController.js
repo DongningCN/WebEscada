@@ -115,6 +115,7 @@ Ext.define('WebEscada.view.main.MainController', {
                 var arrSvgFile = Ext.clone(obj.data.Menu);//复制素组，防止引用
                 EscadaConfig.setUserInfo(obj.data.UserInfo);
                 EscadaConfig.setEvgFileNavigation(arrSvgFile);
+                EscadaConfig.setRuntimeDataNavigation(Ext.clone(obj.data.RtMenu));
                 //根据角色加载相应模块
                 me.LoadModule(obj.data.Menu);
                 

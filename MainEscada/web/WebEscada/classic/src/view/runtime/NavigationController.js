@@ -14,7 +14,7 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     onItemSelect: function(tree, record, index, eOpts){
 		if (record.data.leaf){
 			if(record.data.id && record.data.text) {
-				this.Navigation(record.data.id,record.data.text);
+				this.Navigation(record);
 			}
 		}
     },
@@ -31,13 +31,21 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     		next = next.nextSibling;
     	}
     },
-    
-	Navigation:function(type){
+
+	Navigation:function(record){
 		var me = this;
 		//销毁websocket
 
     	var navigation = this.getView();
-    	navigation.setTitle(type?type:navigation.title);
+    	var title = record.data.text;
+    	var node = record.parentNode;
+    	while(node){
+    		if(node.data.text != "Root"){
+    			title = node.data.text + "/" + title;
+    		}
+    		node = node.parentNode;
+    	}
+    	navigation.setTitle(record.data.text ? title : navigation.title);
 //    	var strpath = URI.get(runtime,'read') + (type ? type : EscadaConfig.getDefaultNavigation("svg_diagram"));
 
 	},

@@ -8189,44 +8189,104 @@
 .error-page-container .error-page-desc a:hover {
     text-decoration: underline;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:2 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:1 */
+.ux-icon-station {
+    background-image: url("/WebEscada/resources/images/station.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:6 */
+.ux-icon-yx {
+    background-image: url("/WebEscada/resources/images/yx.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:11 */
+.ux-icon-yc {
+    background-image: url("/WebEscada/resources/images/yc.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:16 */
+.ux-icon-mc {
+    background-image: url("/WebEscada/resources/images/mc.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:21 */
+.ux-icon-yk {
+    background-image: url("/WebEscada/resources/images/yk.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:26 */
+.ux-icon-yt {
+    background-image: url("/WebEscada/resources/images/yt.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:31 */
+.ux-icon-ft {
+    background-image: url("/WebEscada/resources/images/ft.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:36 */
+.ux-icon-cl {
+    background-image: url("/WebEscada/resources/images/cl.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:41 */
+.ux-icon-ca {
+    background-image: url("/WebEscada/resources/images/ca.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:46 */
+.ux-icon-cm {
+    background-image: url("/WebEscada/resources/images/cm.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:51 */
+.ux-icon-channel {
+    background-image: url("/WebEscada/resources/images/channel.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:56 */
+.ux-icon-rtu {
+    background-image: url("/WebEscada/resources/images/rtu.gif") !important;
+    background-color: transparent;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:61 */
 .ux-icon-search {
     background-image: url("/WebEscada/resources/images/search.gif") !important;
     background-color: transparent;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:6 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:65 */
 .ux-icon-print {
     background-image: url("/WebEscada/resources/images/printer.png") !important;
     background-color: transparent;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:11 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:70 */
 .login-window .x-window-body {
     background-image: url('images/lock-screen-background.jpg');
     background-size: cover;
     background-repeat: repeat;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:17 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:76 */
 .login-window.x-window-default {
     border: none;
     border-radius: 0;
     padding: 0;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:25 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:84 */
 .auth-dialog .auth-profile-wrap {
     background: #35baf6;
     color: #fff;
     line-height: 24px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:30 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:89 */
 .auth-dialog .auth-profile-wrap .user-name-text {
     font-size: 18px;
     font-weight: bold;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:35 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:94 */
 .auth-dialog .auth-profile-wrap .user-post-text {
     font-size: 14px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:39 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:98 */
 .auth-dialog .auth-profile-wrap .auth-profile-img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -8234,21 +8294,21 @@
     -o-border-radius: 50%;
     border-radius: 50%;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:44 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:103 */
 .auth-dialog .x-form-text-default,
 .auth-dialog .x-placeholder-label-default {
     padding: 15px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:48 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:107 */
 .auth-dialog .trigger-glyph-noop {
     cursor: default;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:52 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:111 */
 .auth-dialog .x-form-trigger {
     text-align: right;
     width: 50px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:60 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:119 */
 .auth-dialog .password-trigger:before,
 .auth-dialog .auth-email-trigger:before,
 .auth-dialog .auth-password-trigger:before {
@@ -8258,7 +8318,7 @@
     color: #e5e5e5;
     font-size: 30px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:68 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:127 */
 .auth-dialog .password-trigger.password-trigger:before,
 .auth-dialog .password-trigger.auth-password-trigger:before,
 .auth-dialog .auth-email-trigger.password-trigger:before,
@@ -8267,34 +8327,34 @@
 .auth-dialog .auth-password-trigger.auth-password-trigger:before {
     content: "\f023";
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:73 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:132 */
 .auth-dialog .password-trigger.auth-email-trigger:before,
 .auth-dialog .auth-email-trigger.auth-email-trigger:before,
 .auth-dialog .auth-password-trigger.auth-email-trigger:before {
     content: "\f007";
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:78 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:137 */
 .auth-dialog .link-forgot-password {
     line-height: 32px;
     color: #35baf6;
     text-decoration: none;
     margin-left: 5px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:84 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:143 */
 .auth-dialog .link-forgot-password:hover {
     text-decoration: underline;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:91 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:150 */
 .auth-dialog .x-btn .x-btn-icon-el:before {
     right: 10px;
     font-size: 24px;
     position: absolute;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:101 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:160 */
 .wiring-diagram16 {
     background-image: url("/WebEscada/resources/images/wiringdiagram/diagram-icon-16x16.png");
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:104 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:163 */
 .esacada-headerbar {
     background-color: #246;
     padding: 0 0 0 2;
@@ -8303,33 +8363,33 @@
     z-index: 10;
     border: none;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:111 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:170 */
 .esacada-headerbar .x-toolbar-item {
     font-size: 20px !important;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:115 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:174 */
 .esacada-content {
     border: none;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:118 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:177 */
 .esacada-bottombar {
     width: 100%;
     z-index: 10;
     border: none;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:123 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:182 */
 .top-user-name {
     color: lime;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:126 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:185 */
 .top-logout {
     color: lime;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:129 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:188 */
 .main-left-navigation {
     background: #55f;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:133 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:192 */
 #svgtoolbar .svg-toolbar-head {
     position: absolute;
     left: 0px;
@@ -8339,7 +8399,7 @@
     width: 50px;
     height: 50px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:136 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:195 */
 #svgtoolbar .svg-toolbar-background {
     position: absolute;
     left: 0px;
@@ -8349,7 +8409,7 @@
     width: 128px;
     height: 261px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:139 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:198 */
 #svgtoolbar .svg-toolbar-offset {
     position: absolute;
     overflow: hidden;
@@ -8359,13 +8419,13 @@
     height: 50px;
     cursor: pointer;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:141 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:200 */
 #svgtoolbar .svg-toolbar-offset img {
     width: 50px;
     height: 50px;
     color: red;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:145 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:204 */
 #svgtoolbar .svg-toolbar-restore {
     position: absolute;
     margin: 0px;
@@ -8377,7 +8437,7 @@
     width: 20px;
     height: 20px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:147 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:206 */
 #svgtoolbar .svg-toolbar-restore img {
     position: absolute;
     left: -61px;
@@ -8387,7 +8447,7 @@
     width: 128px;
     height: 261px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:151 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:210 */
 #svgtoolbar .svg-toolbar-magnify {
     position: absolute;
     margin: 0px;
@@ -8399,7 +8459,7 @@
     width: 20px;
     height: 20px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:153 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:212 */
 #svgtoolbar .svg-toolbar-magnify img {
     position: absolute;
     left: -61px;
@@ -8409,7 +8469,7 @@
     width: 128px;
     height: 261px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:157 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:216 */
 #svgtoolbar .svg-toolbar-reduce {
     position: absolute;
     margin: 0px;
@@ -8421,7 +8481,7 @@
     width: 20px;
     height: 20px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:159 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:218 */
 #svgtoolbar .svg-toolbar-reduce img {
     position: absolute;
     left: -90px;
@@ -8431,7 +8491,7 @@
     width: 128px;
     height: 261px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:163 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:222 */
 #svgtoolbar .svg-toolbar-print {
     position: absolute;
     margin: 0px;
@@ -8443,7 +8503,7 @@
     width: 20px;
     height: 20px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:165 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:224 */
 #svgtoolbar .svg-toolbar-print img {
     position: absolute;
     left: -87px;
@@ -8453,7 +8513,7 @@
     width: 128px;
     height: 261px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:169 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:228 */
 #svgtoolbar .svg-toolbar-main {
     position: absolute;
     margin: 0px;
@@ -8465,7 +8525,7 @@
     width: 20px;
     height: 20px;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:171 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:230 */
 #svgtoolbar .svg-toolbar-main img {
     position: absolute;
     left: -108px;
@@ -8850,7 +8910,7 @@
     border-color: #35baf6 !important;
     border-width: 4px !important;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:230 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:289 */
 .x-panel-header-title-navigation {
     text-align: center;
     color: yellow;
@@ -14518,34 +14578,4 @@
     border-color: #656566;
     background-image: none;
     background-color: #6f6f70;
-}
-/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:868 */
-.x-btn-focus.x-btn-menu-active.x-btn-gray-medium,
-.x-btn-focus.x-btn-pressed.x-btn-gray-medium {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-}
-/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:897 */
-.x-btn.x-btn-disabled.x-btn-gray-medium {
-    background-image: none;
-    background-color: #949495;
-}
-/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:929 */
-.x-btn-focus .x-btn-gray-medium-tl,
-.x-btn-focus .x-btn-gray-medium-bl,
-.x-btn-focus .x-btn-gray-medium-tr,
-.x-btn-focus .x-btn-gray-medium-br,
-.x-btn-focus .x-btn-gray-medium-tc,
-.x-btn-focus .x-btn-gray-medium-bc {
-    background-image: url(images/btn/btn-gray-medium-focus-corners.gif);
-}
-/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:937 */
-.x-btn-focus .x-btn-gray-medium-ml,
-.x-btn-focus .x-btn-gray-medium-mr {
-    background-image: url(images/btn/btn-gray-medium-focus-sides.gif);
-}
-/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:941 */
-.x-btn-focus .x-btn-gray-medium-mc {
-    background-color: #949495;
 }

@@ -1,5 +1,5 @@
 <?php
-namespace frontend\models;
+namespace MainEscada\models;
 
 use yii\base\Model;
 use common\models\usercfg;

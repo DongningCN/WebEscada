@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace MainEscada\models;
 
 use Yii;
 use yii\base\Model;

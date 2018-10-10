@@ -1,3 +1,33 @@
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:868 */
+.x-btn-focus.x-btn-menu-active.x-btn-gray-medium,
+.x-btn-focus.x-btn-pressed.x-btn-gray-medium {
+    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:897 */
+.x-btn.x-btn-disabled.x-btn-gray-medium {
+    background-image: none;
+    background-color: #949495;
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:929 */
+.x-btn-focus .x-btn-gray-medium-tl,
+.x-btn-focus .x-btn-gray-medium-bl,
+.x-btn-focus .x-btn-gray-medium-tr,
+.x-btn-focus .x-btn-gray-medium-br,
+.x-btn-focus .x-btn-gray-medium-tc,
+.x-btn-focus .x-btn-gray-medium-bc {
+    background-image: url(images/btn/btn-gray-medium-focus-corners.gif);
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:937 */
+.x-btn-focus .x-btn-gray-medium-ml,
+.x-btn-focus .x-btn-gray-medium-mr {
+    background-image: url(images/btn/btn-gray-medium-focus-sides.gif);
+}
+/* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:941 */
+.x-btn-focus .x-btn-gray-medium-mc {
+    background-color: #949495;
+}
 /* E:/git/WebEscada/MainEscada/web/WebEscada/ext/classic/theme-neutral/sass/src/button/Button.scss:953 */
 .x-btn-over .x-btn-gray-medium-tl,
 .x-btn-over .x-btn-gray-medium-bl,
@@ -6188,7 +6218,7 @@
 .x-button-header-small-cell > .x-grid-cell-inner >.x-btn-header-small {
     vertical-align: top;
 }
-/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:285 */
+/* E:/git/WebEscada/MainEscada/web/WebEscada/classic/sass/src/view/main/Main.scss:344 */
 .x-form-readonly input,
 .x-form-readonly textarea,
 .x-form-readonly .x-form-cb-default::before {
