@@ -2,7 +2,14 @@
 Ext.define('WebEscada.view.runtime.Runtime',{
     extend: 'Ext.grid.Panel',
     xtype:'runtime-data',
-
+    
+    requires: [
+        'Ext.grid.Panel',
+        'WebEscada.view.runtime.RuntimeModel',
+        'WebEscada.view.runtime.RuntimeController'
+    ],
+    controller: 'runtime',
+    viewModel: 'runtime',
     initComponent: function() {
         var me = this;
 

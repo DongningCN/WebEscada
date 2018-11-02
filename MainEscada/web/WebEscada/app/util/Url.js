@@ -69,14 +69,14 @@
         logo: 'resources/images/company-logo.png',
         '': 'resources/images/'
     },
-    ROOTPATH : 'http://webescada.com/WebEscada/',
+    WEBPATH : ROOTPATH + '/WebEscada/',
   //绝对路径
     getResource: function (res) {
         var me = this;
         if(res === 'classic' || res === 'modern'){
-        	return me.ROOTPATH + res + '/' + 'resources/images/';
+        	return me.WEBPATH + res + '/' + 'resources/images/';
         }else{
-        	return me.ROOTPATH + ((res&&me.resources[res]) ? me.resources[res] : 'resources/images/');
+        	return me.WEBPATH + ((res&&me.resources[res]) ? me.resources[res] : 'resources/images/');
         }
     }
 

@@ -278,10 +278,16 @@ WldSvg.prototype.Init = function(GraphID,ChartID)
 		Dom.OldStyle = (Dom.style) ? Dom.style.cssText : "";
 		var attrs = Dom.attributes;
 		var ContrlMap = "";
+		var click = "";
 		//ContrlMap = Dom.getAttribute("contrlmap");//得到关联条目字符串,contrlmap属性非DOM原生属性，测试时在特殊性况下得到为undifinded
 		for(var j=0;j<attrs.length;j++)
 		{
-			if(attrs[j].name == "contrlMap")
+			if(attrs[j].name == "click"){
+				if(attrs[j].nodeValue != "func-yktoolbar"){
+					Dom.setAttribute("click","Graph_Click(evt"+ attrs[j].nodeValue +")");
+				}
+			}
+			else if(attrs[j].name == "contrlMap")
 			{
 				ContrlMap = attrs[j].nodeValue;
 				break;
@@ -2663,12 +2669,12 @@ function FlushSpeed(id,flushTime)
 //鼠标移动变色
 function Graph_MouseOver(me)
 {
-	var ContrlMap = me.getAttribute("contrlmap");//得到关联条目字符串
+	var ContrlMap = me.getAttribute("contrlmap") || me.getAttribute("contrlMap");//得到关联条目字符串
 	if(ContrlMap)
 	{
 		var str = ContrlMap.replace(/'/g, '"');
 		var Ass = JSON.parse(str);//将字符串转换为关联条目对象
-		SetStyle(me,Ass.MouseOverColor);
+		SetStyle(me,Ass.MouseOverColor.FillColor);
 	}
 }
 function Graph_MouseOut(me)

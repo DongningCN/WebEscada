@@ -55,8 +55,10 @@
      *      ]
      */
     "requires": [
-        "font-awesome"
+        "font-awesome",
+        "locale"
     ],
+    "locale": "zh_CN",
 
     /**
      * Fashion build configuration properties.

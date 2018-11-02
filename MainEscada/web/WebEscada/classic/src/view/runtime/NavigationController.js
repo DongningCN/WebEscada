@@ -4,7 +4,8 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     
     requires: [
     	'WebEscada.view.svg.Svg',
-    	'WebEscada.view.svg.Navigation'
+    	'WebEscada.view.svg.Navigation',
+    	'WebEscada.model.Yx'
     ],
     
 	/*
@@ -47,13 +48,29 @@ Ext.define('WebEscada.view.runtime.NavigationController', {
     	}
     	navigation.setTitle(record.data.text ? title : navigation.title);
 //    	var strpath = URI.get(runtime,'read') + (type ? type : EscadaConfig.getDefaultNavigation("svg_diagram"));
-
+    	var runtime = Ext.getCmp('runtime_data');
+    	var store = {};
+    	if(record.data.text == "遥信"){
+    		store = runtime.getController().getStore('yx');
+    		store.load();
+    		runtime.reconfigure(store,EscadaConfig.getRtYxColumns());
+    	}else if(record.data.text == "遥测"){
+    		store = runtime.getController().getStore('yc');
+    		store.load();
+    		runtime.reconfigure(store,EscadaConfig.getRtYcColumns());
+    	}else if(record.data.text == "脉冲"){
+    		runtime.reconfigure(store,EscadaConfig.getRtMcColumns());
+    	}else if(record.data.text == "遥控"){
+    		runtime.reconfigure(store,EscadaConfig.getYkColumns());
+    	}else{
+    		runtime.reconfigure(store,[]);
+    	}
+    	
 	},
 	
 	onBeforerender: function(Component, eOpts){
 		var dir = Ext.clone(EscadaConfig.getRuntimeDataNavigation());
 		this.getView().getRootNode().appendChild(dir);
-		//this.Navigation();
 	}
 	
 });

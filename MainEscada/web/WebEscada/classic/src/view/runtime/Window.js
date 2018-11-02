@@ -24,7 +24,7 @@ Ext.define('WebEscada.view.runtime.Window', {
 	            ui			: 'navigation',
 	            id			: 'nav',
 	            cls			: 'runtime-navigation',
-	            width		: 250,
+	            width		: 280,
 	            region		: 'west'
             },{
 				xtype		: 'runtime-data',
